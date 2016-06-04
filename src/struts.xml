@@ -9,5 +9,8 @@
 			<result name="success">/success.jsp</result>
 			<result name="input">/Error.jsp</result>
 		</action>
+		<action name="country">
+			<result>/index.jsp</result>
+		</action>
 	</package>
 </struts>

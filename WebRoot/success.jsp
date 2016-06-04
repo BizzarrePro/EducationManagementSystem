@@ -26,8 +26,39 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
     <h1>Hello EveryBody</h1>
     <center>
-    	<s:property value="#user.num"/><br/>
-   	 	<s:property value="#user.password"/><br/>
+    	<s:bean name="com.model.User" var="usr">
+    		<s:param name="num" value="'20133'" >
+    		</s:param>
+    		<s:param name="password" value="'13243445345'">
+    		</s:param>
+    	</s:bean>
+    	<s:property value="#usr.num"/> 
+    	<s:if test="#usr.password == null">
+    		SABI
+    	</s:if>
+    	<s:else>
+    		<s:property value="#usr.password"/> 
+    	</s:else>
+       	<br/>
+    	<br/>
+    	<s:property value="%{user1.num}"/><br/>
+   	 	<s:property value="#user1.password"/><br/> 
+   	 	<!-- s:property value="#list.get(0).num"/-->
+   	 	<s:iterator value="%{list}" var="p" status="st">
+   	 		<s:property/>
+   	 		<s:iterator value="#list.get(#st.index)" var="a">
+   	 			<s:property value="#a.num"/><br/>
+   	 		</s:iterator>
+   	 		<br/>
+   	 	</s:iterator>
+   	 	<!-- s:property> value="#list.get(0).num"/--><br/>	
     </center>
+        	<s:if test="#user1.num == 11111">
+        		You are administrator.
+        	</s:if>
+        	<s:else>
+        		You are a full guy.
+        	</s:else>
+    <hr/>
   </body>
 </html>
