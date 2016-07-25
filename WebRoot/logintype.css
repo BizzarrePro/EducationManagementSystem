@@ -1,0 +1,181 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	height: 100%;
+   	margin: auto;
+   	padding: 0;
+}
+#container{
+	width: 1360px;
+}
+#top{
+	width: 1250px;
+	height: 100px;
+	background: green;
+	margin: 20px 50px 0px 50px;
+	text-align: center;
+
+}
+#left{
+	width: 700px;
+	height: 500px;
+	margin: 50px 50px 50px 50px;
+	float: left;
+}
+#main{
+	width:450px;
+	height: 500px;
+	margin: 50px 0px 50px 50px;
+	float: left;
+}
+#foot{
+	width: 1250px;
+	height: 100px;
+	background: #999999;
+	float: left;
+	margin: 0px 50px 20px 50px;
+	text-align: center;
+	color:white;
+	font-size: 15px;
+	opacity: 0.7;
+}
+
+
+#left .content .divPics ul
+{
+    list-style: none;
+    padding: 0px ;
+    margin: 20px 0px 50px 20px ;
+}
+#left .content .divPics ul li
+{
+    display: inline;
+}
+#left .content .divPics ul img
+{
+    border: 1px solid #444;
+    border-width: 5px;
+    width: 200px;
+    height: 200px;
+}
+#left .content .divPics ul a:hover img
+{
+    border: 5px solid #fff;
+    border-width: 5px;
+    color: #fff;
+}
+#left .content .divPics ul a:hover
+{
+    color: #fff;
+}
+
+#main .title{
+	width:450px;
+	height: 70px;
+	background: green;
+	color: white;
+	font-size: 20px;
+	margin: 20px 0px 0px 0px;
+	text-align: center;
+	font-family: "微软雅黑";
+	letter-spacing: 2px;
+}
+
+input{
+	margin: 20px 0px 0px 110px;
+	width: 200px;
+	height: 40px;
+	border: 1px solid rgba(0,128,0,1);
+	color: green;
+	font-weight: bold;
+	font-size: 15px;
+    letter-spacing: 2px;
+    font-family: "微软雅黑";
+}
+ .Re .reset{
+	width:100px;
+	height:45px;
+	line-height: 45px;
+	display: block;
+	margin: 20px 0px 0px 350px;
+	color: black;
+	letter-spacing: 2px;
+	font-family: "微软雅黑";
+	text-align: center;
+	text-decoration: none;
+}
+
+.box .button{
+	width:356px;
+	height:45px;
+	line-height: 45px;
+	display: block;
+	background: green;
+	margin: 100px 0px 0px 35px;
+	font-family: "微软雅黑";
+	font-size: 18px;
+	letter-spacing: 2px;
+	font-weight: bolder;
+	text-decoration: none;
+	text-align: center;
+	color: white;
+	padding-left: 20px;
+    border: 1px solid rgba(0,128,0,1);
+   	transition: all 0.3s ease;
+   	-webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+   	position: relative;
+}
+
+.box .button:hover{
+	border: 1px solid rgba(225,128,0,1);
+	background:rgba(0,225,0,0.7);
+   	position: relative;
+}
+.box .line{
+	background-color: green;
+    opacity: 0.7;
+}
+/* */
+.box .line-top{
+	width: 0px;
+	height: 1px;
+	display: block;
+	position: absolute;
+	top:-1px;
+	left: -100%;
+	transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+}
+.box .button:hover .line-top{
+	width: 372px;
+	left: -1px;
+	border: 1px solid rgba(0,128,0,0.7);
+
+}
+
+.box .line-bottom{
+	width: 0px;
+	height: 1px;
+	display: block;
+	position: absolute;
+	bottom:-1px;
+	right: -100%;
+	transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+}
+.box .button:hover .line-bottom{
+	width: 372px;
+	right: -1px;
+	border: 1px solid rgba(0,128,0,0.7);
+
+}
+
+
