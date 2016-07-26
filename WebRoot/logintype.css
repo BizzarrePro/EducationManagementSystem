@@ -83,7 +83,7 @@ body{
 	letter-spacing: 2px;
 }
 
-input{
+.u{
 	margin: 20px 0px 0px 110px;
 	width: 200px;
 	height: 40px;
@@ -94,6 +94,11 @@ input{
     letter-spacing: 2px;
     font-family: "微软雅黑";
 }
+.i{
+	margin��20px 0px 0px 200px;
+	display:block;
+}
+
  .Re .reset{
 	width:100px;
 	height:45px;

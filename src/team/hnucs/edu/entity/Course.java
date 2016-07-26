@@ -14,6 +14,10 @@ public class Course implements java.io.Serializable {
 
 	// Fields
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String courNum;
 	private Teacher teacher;
 	private String courName;
@@ -23,9 +27,9 @@ public class Course implements java.io.Serializable {
 	private String courType;
 	private Short choosedNum;
 	private Boolean courseSemester;
-	private Set scores = new HashSet(0);
-	private Set examArrangements = new HashSet(0);
-	private Set courseSelections = new HashSet(0);
+	private Set<Score> scores = new HashSet<Score>();
+	private Set<ExamArrangement> examArrangements = new HashSet<ExamArrangement>();
+	private Set<CourseSelection> courseSelections = new HashSet<CourseSelection>();
 
 	// Constructors
 
@@ -50,7 +54,7 @@ public class Course implements java.io.Serializable {
 	public Course(String courNum, Teacher teacher, String courName,
 			Short courLimitedNum, Date courStartDate, Boolean courCredits,
 			String courType, Short choosedNum, Boolean courseSemester,
-			Set scores, Set examArrangements, Set courseSelections) {
+			Set<Score> scores, Set<ExamArrangement> examArrangements, Set<CourseSelection> courseSelections) {
 		this.courNum = courNum;
 		this.teacher = teacher;
 		this.courName = courName;
@@ -139,27 +143,27 @@ public class Course implements java.io.Serializable {
 		this.courseSemester = courseSemester;
 	}
 
-	public Set getScores() {
+	public Set<Score> getScores() {
 		return this.scores;
 	}
 
-	public void setScores(Set scores) {
+	public void setScores(Set<Score> scores) {
 		this.scores = scores;
 	}
 
-	public Set getExamArrangements() {
+	public Set<ExamArrangement> getExamArrangements() {
 		return this.examArrangements;
 	}
 
-	public void setExamArrangements(Set examArrangements) {
+	public void setExamArrangements(Set<ExamArrangement> examArrangements) {
 		this.examArrangements = examArrangements;
 	}
 
-	public Set getCourseSelections() {
+	public Set<CourseSelection> getCourseSelections() {
 		return this.courseSelections;
 	}
 
-	public void setCourseSelections(Set courseSelections) {
+	public void setCourseSelections(Set<CourseSelection> courseSelections) {
 		this.courseSelections = courseSelections;
 	}
 
