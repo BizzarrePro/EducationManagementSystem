@@ -23,8 +23,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
     <h1 style="color:#4F9D9D;background-color:#613030;font-size:25px">个人门户登录</h1>
     	<s:form action="user">
-    		<s:textfield label="工号/学号" name="num" cssStyle="width:265px" /><br/>
-    		<s:password label="密 码" name="password" cssStyle="width:265px" /><br/>
+    		<s:textfield label="工号/学号" name="name" cssStyle="width:265px" /><br/>
+    		<s:password label="密 码" name="attribute" cssStyle="width:265px" /><br/>
+    		<s:bean name="com.entity.User" var="hello">
+    			<s:param name="name" value="'qian baobao'"/>
+    			<s:param name="attribute" value="'hello'"/>
+    		</s:bean>
     		<s:submit value="登录"/>
     	</s:form>  
     </body>

@@ -2,14 +2,36 @@
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
 
 <hibernate-reverse-engineering>
-	<table name="COURSE_ATTR" schema="LIUSIYUAN" class="Course"></table>
+	<table name="COURSE_ATTR" schema="LIUSIYUAN" class="Course">
+		<primary-key>
+			<generator class="uuid.hex"></generator>
+		</primary-key>
+	</table>
 	<table name="COURSE_SELECTION" schema="LIUSIYUAN"
 		class="CourseSelection">
+		<primary-key>
+			<generator class="uuid.hex"></generator>
+		</primary-key>
 	</table>
 	<table name="EXAM_ARRANGEMENT" schema="LIUSIYUAN"
 		class="ExamArrangement">
+		<primary-key>
+			<generator class="uuid.hex"></generator>
+		</primary-key>
 	</table>
-	<table name="STUDENT_ATTR" schema="LIUSIYUAN" class="Student"></table>
-	<table name="STUDENT_SCORE" schema="LIUSIYUAN" class="Score"></table>
-	<table name="TEACHER_ATTR" schema="LIUSIYUAN" class="Teacher"></table>
+	<table name="STUDENT_ATTR" schema="LIUSIYUAN" class="Student">
+		<primary-key>
+			<generator class="uuid.hex"></generator>
+		</primary-key>
+	</table>
+	<table name="STUDENT_SCORE" schema="LIUSIYUAN" class="Score">
+		<primary-key>
+			<generator class="uuid.hex"></generator>
+		</primary-key>
+	</table>
+<table name="TEACHER_ATTR" schema="LIUSIYUAN" class="Teacher">
+	<primary-key>
+		<generator class="uuid.string"></generator>
+	</primary-key>
+</table>
 </hibernate-reverse-engineering>

@@ -26,28 +26,29 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
     <h1>Hello EveryBody</h1>
     <center>
-    	<s:bean name="com.model.User" var="usr">
-    		<s:param name="num" value="'20133'" >
+    	<s:bean name="com.entity.User" var="usr">
+    		<s:param name="name" value="'20133'" >
     		</s:param>
-    		<s:param name="password" value="'13243445345'">
+    		<s:param name="attribute" value="'13243445345'">
     		</s:param>
     	</s:bean>
-    	<s:property value="#usr.num"/> 
-    	<s:if test="#usr.password == null">
+    	<s:property value="#usr.name"/> 
+    	<s:if test="#usr.attribute == null">
     		SABI
     	</s:if>
     	<s:else>
-    		<s:property value="#usr.password"/> 
+    		<s:property value="#usr.attribute"/> 
     	</s:else>
        	<br/>
+       	<s:property value="#hello.name"/>
     	<br/>
-    	<s:property value="%{user1.num}"/><br/>
-   	 	<s:property value="#user1.password"/><br/> 
+    	<s:property value="%{user1.name}"/><br/>
+   	 	<s:property value="#user1.attribute"/><br/> 
    	 	<!-- s:property value="#list.get(0).num"/-->
    	 	<s:iterator value="%{list}" var="p" status="st">
    	 		<s:property/>
    	 		<s:iterator value="#list.get(#st.index)" var="a">
-   	 			<s:property value="#a.num"/><br/>
+   	 			<s:property value="#a.name"/><br/>
    	 		</s:iterator>
    	 		<br/>
    	 	</s:iterator>

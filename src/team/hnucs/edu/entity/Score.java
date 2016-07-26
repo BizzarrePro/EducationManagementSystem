@@ -1,69 +1,56 @@
 package team.hnucs.edu.entity;
+
 // default package
-
-
 
 /**
  * Score entity. @author MyEclipse Persistence Tools
  */
 
-public class Score  implements java.io.Serializable {
+public class Score implements java.io.Serializable {
 
+	// Fields
 
-    // Fields    
+	private ScoreId id;
+	private Student student;
+	private Course course;
 
-     private ScoreId id;
-     private Student student;
-     private Course course;
+	// Constructors
 
+	/** default constructor */
+	public Score() {
+	}
 
-    // Constructors
+	/** full constructor */
+	public Score(ScoreId id, Student student, Course course) {
+		this.id = id;
+		this.student = student;
+		this.course = course;
+	}
 
-    /** default constructor */
-    public Score() {
-    }
+	// Property accessors
 
-    
-    /** full constructor */
-    public Score(ScoreId id, Student student, Course course) {
-        this.id = id;
-        this.student = student;
-        this.course = course;
-    }
+	public ScoreId getId() {
+		return this.id;
+	}
 
-   
-    // Property accessors
+	public void setId(ScoreId id) {
+		this.id = id;
+	}
 
-    public ScoreId getId() {
-        return this.id;
-    }
-    
-    public void setId(ScoreId id) {
-        this.id = id;
-    }
+	public Student getStudent() {
+		return this.student;
+	}
 
-    public Student getStudent() {
-        return this.student;
-    }
-    
-    public void setStudent(Student student) {
-        this.student = student;
-    }
+	public void setStudent(Student student) {
+		this.student = student;
+	}
 
-    public Course getCourse() {
-        return this.course;
-    }
-    
-    public void setCourse(Course course) {
-        this.course = course;
-    }
-   
+	public Course getCourse() {
+		return this.course;
+	}
 
-
-
-
-
-
-
+	public void setCourse(Course course) {
+		this.course = course;
+	}
 
 }

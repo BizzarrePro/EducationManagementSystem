@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.apache.struts2.interceptor.ServletRequestAware;
 
-import team.hnucs.edu.entity.User;
+import com.entity.User;
 
 import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.ActionContext;
@@ -23,6 +23,8 @@ public class LoginAction extends ActionSupport implements ModelDriven<User>{
 	public String execute() throws Exception{
 		ActionContext context = ActionContext.getContext();
 		context.put("user1", getModel());
+		User user = new User("Hi", "I am No.2");
+		setUser(user);
 		ArrayList<User> list = new ArrayList<User>();
 		list.add(new User("12222","hahaa"));
 		list.add(new User("23333","hahaa"));
