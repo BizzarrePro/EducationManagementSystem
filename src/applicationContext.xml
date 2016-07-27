@@ -44,4 +44,35 @@
 	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
-	<tx:annotation-driven transaction-manager="transactionManager" /></beans>
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	<bean id="TeacherLoginAction" class="team.hnucs.edu.action.LoginAction">
+		<property name="teacherService">
+			<ref bean="teacherService" />
+		</property>
+	</bean>
+	<bean id="StudentLoginAction" class="team.hnucs.edu.action.LoginAction">
+		<property name="studentService">
+			<ref bean="studentService" />
+		</property>
+	</bean>
+	<bean id="studentService" class="team.hnucs.edu.service.impl.StudentServiceImpl">
+		<property name="studentDAO">
+			<ref bean="studentDAO" />
+		</property>
+	</bean>
+	<bean id="teacherService" class="team.hnucs.edu.service.impl.TeacherServiceImpl">
+		<property name="teacherDAO">
+			<ref bean="teacherDAO" />
+		</property>
+	</bean>
+	<bean id="studentDAO" class="team.hnucs.edu.dao.impl.StudentDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="teacherDAO" class="team.hnucs.edu.dao.impl.TeacherDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+</beans>

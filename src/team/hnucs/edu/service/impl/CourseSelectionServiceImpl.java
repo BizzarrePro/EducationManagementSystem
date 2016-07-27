@@ -4,11 +4,12 @@ import java.util.List;
 
 import team.hnucs.edu.dao.CourseSelectionDAO;
 import team.hnucs.edu.entity.CourseSelection;
+import team.hnucs.edu.entity.Student;
 
 public class CourseSelectionServiceImpl implements CourseSelectionDAO{
 
 	@Override
-	public List<CourseSelection> findByCourse(String courName) {
+	public List<Student> findByCourse(String courName) {
 		// TODO Auto-generated method stub
 		return null;
 	}

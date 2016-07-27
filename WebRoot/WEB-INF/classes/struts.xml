@@ -5,9 +5,11 @@
 <struts>
 	<constant name="struts.devMode" value="true"/>
 	<package name="default" extends="struts-default">
-		<action name="login" class="team.hnucs.edu.action.StudentAction" method="login">
-			<result name="login">/success.jsp</result>
-			<result name="input">/Error.jsp</result>
+		<action name="login" class="team.hnucs.edu.action.LoginAction" method="login">
+			<result name="student">/student.jsp</result>
+			<result name="teacher">/teacher.jsp</result>
+			<result name="administrator">/teacher.jsp</result>
+			<result name="loginError">/teacher.jsp</result>
 		</action>
 	</package>
 </struts>
