@@ -3,95 +3,70 @@
 	padding: 0;
 }
 body{
+	background: url(images/bg.png) no-repeat ;
 	height: 100%;
-   	margin: auto;
-   	padding: 0;
+}
+#head{
+	text-align: center;
+	margin: 50px 0px 0px 0px;
 }
 #container{
 	width: 1360px;
 }
-#top{
-	width: 1250px;
-	height: 100px;
-	background: green;
-	margin: 20px 50px 0px 50px;
-	text-align: center;
 
-}
-#left{
-	width: 700px;
-	height: 500px;
-	margin: 50px 50px 50px 50px;
-	float: left;
-}
+
 #main{
-	width:450px;
-	height: 500px;
-	margin: 50px 0px 50px 50px;
+	width:860px;
+	height: 400px;
+	margin: 70px 0px 50px 250px;
 	float: left;
+	text-align: center;
+	background-color: rgba(255,255,255,0.2);
 }
 #foot{
-	width: 1250px;
-	height: 100px;
-	background: #999999;
+	width: 1350px;
+	height: 50px;
+	background-color: #999999;
+	background: rgba(255,255,255,0.3);
 	float: left;
-	margin: 0px 50px 20px 50px;
+	margin: 100px 50px 0px 0px;
 	text-align: center;
 	color:white;
 	font-size: 15px;
-	opacity: 0.7;
 }
 
 
-#left .content .divPics ul
-{
-    list-style: none;
-    padding: 0px ;
-    margin: 20px 0px 50px 20px ;
-}
-#left .content .divPics ul li
-{
-    display: inline;
-}
-#left .content .divPics ul img
-{
-    border: 1px solid #444;
-    border-width: 5px;
-    width: 200px;
-    height: 200px;
-}
-#left .content .divPics ul a:hover img
-{
-    border: 5px solid #fff;
-    border-width: 5px;
-    color: #fff;
-}
-#left .content .divPics ul a:hover
-{
-    color: #fff;
-}
+
 
 #main .title{
 	width:450px;
 	height: 70px;
-	background: green;
+	background: rgba(225,225,225,0.3);
 	color: white;
 	font-size: 20px;
-	margin: 20px 0px 0px 0px;
+	margin: 20px 0px 0px 200px;
 	text-align: center;
 	font-family: "微软雅黑";
 	letter-spacing: 2px;
+
 }
 
+<<<<<<< HEAD:WebRoot/css/logintype.css
+input{
+	margin: 20px 0px 0px 0px;
+	width: 356px;
+=======
 .u{
 	margin: 20px 0px 0px 110px;
 	width: 200px;
+>>>>>>> 27a4b55d96d1f5ae99f707d987317e72c0ad74c2:WebRoot/logintype.css
 	height: 40px;
-	border: 1px solid rgba(0,128,0,1);
-	color: green;
+	background: rgba(0,128,0,0);
+	border: 1px solid rgba(255,255,255,0.3);
+	color: rgba(225,255,255,1);
 	font-weight: bold;
 	font-size: 15px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-family: "微软雅黑";
 }
 .i{
@@ -104,8 +79,8 @@ body{
 	height:45px;
 	line-height: 45px;
 	display: block;
-	margin: 20px 0px 0px 350px;
-	color: black;
+	margin: 30px 0px 0px 380px;
+	color: white;
 	letter-spacing: 2px;
 	font-family: "微软雅黑";
 	text-align: center;
@@ -117,8 +92,8 @@ body{
 	height:45px;
 	line-height: 45px;
 	display: block;
-	background: green;
-	margin: 100px 0px 0px 35px;
+	background: rgba(225,255,255,0.2);
+	margin: 50px 0px 0px 250px;
 	font-family: "微软雅黑";
 	font-size: 18px;
 	letter-spacing: 2px;
@@ -126,8 +101,7 @@ body{
 	text-decoration: none;
 	text-align: center;
 	color: white;
-	padding-left: 20px;
-    border: 1px solid rgba(0,128,0,1);
+    border: 1px solid rgba(255,255,255,0.3);
    	transition: all 0.3s ease;
    	-webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
@@ -136,13 +110,12 @@ body{
 }
 
 .box .button:hover{
-	border: 1px solid rgba(225,128,0,1);
-	background:rgba(0,225,0,0.7);
+	border: 1px solid rgba(225,255,255,0.3);
+	background:rgba(255,225,255,0.7);
    	position: relative;
 }
 .box .line{
-	background-color: green;
-    opacity: 0.7;
+	background-color: rgba(225,255,255,0.3);
 }
 /* */
 .box .line-top{
@@ -158,9 +131,10 @@ body{
     -moz-transition: all 0.2s ease;
 }
 .box .button:hover .line-top{
-	width: 372px;
+	width: 355px;
 	left: -1px;
-	border: 1px solid rgba(0,128,0,0.7);
+	border: 1px solid rgba(255,255,255,0.3);
+	opacity: 1;
 
 }
 
@@ -177,9 +151,9 @@ body{
     -moz-transition: all 0.2s ease;
 }
 .box .button:hover .line-bottom{
-	width: 372px;
+	width: 355px;
 	right: -1px;
-	border: 1px solid rgba(0,128,0,0.7);
+	border: 1px solid rgba(255,255,255,0.3);
 
 }
 
