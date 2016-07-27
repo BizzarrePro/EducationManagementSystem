@@ -9,6 +9,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
 	<title>login</title>
 	<meta charset="utf-8">
+<<<<<<< HEAD
+	<link rel="stylesheet" type="text/css" href="css/logintype.css">
+  <script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+</head>
+<body>
+	<div id="container">
+      <div id="head">
+        <img src="images/title.png">
+      </div>
+=======
 	<link rel="stylesheet" type="text/css" href="logintype.css">
 	<script type="text/javascript" src="JavaScript/jquery-3.1.0.js"></script>
 	<script type="text/javascript" src="./jquery.notesforlightbox.js"></script>
@@ -62,9 +72,28 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             });
         </script>
        <!--登陆部分-->
+>>>>>>> 27a4b55d96d1f5ae99f707d987317e72c0ad74c2
    		<div id="main">
-   		 <div class="title">
+   		   <div class="title">
    		    </br>
+<<<<<<< HEAD
+   		   	<p>用户登录</p>
+   		   </div>
+   			<form>
+
+   				<input id="user" type="text" style="text-indent:6px" name="user" placeholder="&nbsp用户名"></br>
+   				<input id="password" type="password"  style="text-indent:6px" name="password"  placeholder="&nbsp密码">
+
+	  			<div class="box">
+            <a href="#" class="button" type="submit">
+            <span class="line line-top"></span>
+            <span class="line line-right"></span>
+            <span class="line line-bottom"></span>
+            <span class="line line-left"></span>
+            登录
+            </a>
+	  		 		
+=======
    		 	<p>用户登录</p>
    		 </div>
    			<form action="login" method="post">
@@ -80,17 +109,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	  		 		<span class="line line-right"></span>
 	  		 		<span class="line line-bottom"></span>
 	  		 		<span class="line line-left"></span>
+>>>>>>> 27a4b55d96d1f5ae99f707d987317e72c0ad74c2
 	  			</div>
 	  			<div class="Re">
-	  				<a href="#" class="reset"> 重置</a>
+	  				<input class="reset" type="reset" name="reset" value="重置">
 	  			</div>
-	  			
+	  	
    			</form>
    		</div>
  		<!--页底-->
    		<div id="foot">
-   		    </br>
-   		    </br>
+        </br>
    			<p>copyright by Liu and Yang</p>
    		</div>
 	</div>
