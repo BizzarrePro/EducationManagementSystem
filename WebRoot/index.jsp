@@ -9,88 +9,43 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
 	<title>login</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="logintype.css">
-	<script type="text/javascript" src="./JavaScript/jquery-3.1.0.js"></script>
-	<script type="text/javascript" src="./jquery.notesforlightbox.js"></script>
-     <script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/logintype.css">
+  <script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
 </head>
 <body>
 	<div id="container">
-	   <!--顶部栏-->
-		<div id="top">
-			<img src="./image/title.png" style="margin-top:20px">
-		</div>
-		
-       <!--左部照片栏-->
-   		<div id="left">
-   			<div class="content">
-                <div class="divPics">
-                    <ul>
-                        <li><a href="./image/p1.jpg" title="第1篇风景图片">
-                            <img src="./image/p1.jpg" alt="" />
-                        </a></li>
-                        <li><a href="./image/p2.jpg" title="第2篇风景图片">
-                            <img src="./image/p2.jpg" alt="" />
-                        </a></li>
-                        <li><a href="./image/p3.jpg" title="第3篇风景图片">
-                            <img src="./image/p3.jpg" alt="" />
-                        </a></li>
-                    </ul>
-
-                	  <ul>
-                        <li><a href="./image/p4.jpg" title="第4篇风景图片">
-                            <img src="./image/p4.jpg" alt="" />
-                        </a></li>
-                        <li><a href="./image/p5.jpg" title="第5篇风景图片">
-                            <img src="./image/p5.jpg" alt="" />
-                        </a></li>
-                        <li><a href="./image/p6.jpg" title="第6篇风景图片">
-                            <img src="./image/p6.jpg" alt="" />
-                        </a></li>
-                    </ul>
-
-                </div>
-            </div>
-   		</div>
-   		 <script type="text/javascript">
-            $(function () {
-               $('divPics a').lightBox({
-                    overlayBgColor: "#666", //图片浏览时的背景色
-                    overlayOpacity: 0.5, //背景色的透明度
-                    containerResizeSpeed: 600 //图片切换时的速度
-                })
-            });
-        </script>
-       <!--登陆部分-->
+      <div id="head">
+        <img src="images/title.png">
+      </div>
    		<div id="main">
-   		 <div class="title">
+   		   <div class="title">
    		    </br>
-   		 	<p>用户登录</p>
-   		 </div>
+   		   	<p>用户登录</p>
+   		   </div>
    			<form>
 
-   				<input type="text" style="text-indent:6px" name="user" placeholder="&nbsp用户名"></br>
-   				<input type="password"  style="text-indent:6px" name="password"  placeholder="&nbsp密码">
+   				<input id="user" type="text" style="text-indent:6px" name="user" placeholder="&nbsp用户名"></br>
+   				<input id="password" type="password"  style="text-indent:6px" name="password"  placeholder="&nbsp密码">
 
 	  			<div class="box">
-	  				<a href="#" class="button" >
-	  		 		<span class="line line-top"></span>
-	  		 		<span class="line line-right"></span>
-	  		 		<span class="line line-bottom"></span>
-	  		 		<span class="line line-left"></span>
-	  		 		登录
-	  			 	</a>
+            <a href="#" class="button" type="submit">
+            <span class="line line-top"></span>
+            <span class="line line-right"></span>
+            <span class="line line-bottom"></span>
+            <span class="line line-left"></span>
+            登录
+            </a>
+	  		 		
 	  			</div>
 	  			<div class="Re">
-	  				<a href="#" class="reset"> 重置</a>
+	  				<input class="reset" type="reset" name="reset" value="重置">
 	  			</div>
-	  			
+	  	
    			</form>
    		</div>
  		<!--页底-->
    		<div id="foot">
-   		    </br>
-   		    </br>
+        </br>
    			<p>copyright by Liu and Yang</p>
    		</div>
 	</div>
