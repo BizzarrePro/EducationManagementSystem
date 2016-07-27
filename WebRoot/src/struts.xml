@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.devMode" value="true"/>
+	<package name="default" extends="struts-default">
+		<action name="user" class="team.hnucs.edu.action.Student" method="login">
+			<result name="login">/success.jsp</result>
+			<result name="input">/Error.jsp</result>
+		</action>
+	</package>
+</struts>

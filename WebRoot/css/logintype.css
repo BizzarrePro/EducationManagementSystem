@@ -51,9 +51,15 @@ body{
 
 }
 
+<<<<<<< HEAD:WebRoot/css/logintype.css
 input{
 	margin: 20px 0px 0px 0px;
 	width: 356px;
+=======
+.u{
+	margin: 20px 0px 0px 110px;
+	width: 200px;
+>>>>>>> 27a4b55d96d1f5ae99f707d987317e72c0ad74c2:WebRoot/logintype.css
 	height: 40px;
 	background: rgba(0,128,0,0);
 	border: 1px solid rgba(255,255,255,0.3);
@@ -63,6 +69,11 @@ input{
     letter-spacing: 1px;
     font-family: "微软雅黑";
 }
+.i{
+	margin��20px 0px 0px 200px;
+	display:block;
+}
+
  .Re .reset{
 	width:100px;
 	height:45px;
