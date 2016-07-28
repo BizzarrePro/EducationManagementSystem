@@ -45,19 +45,20 @@ public class LoginAction extends ActionSupport {
 	}
 	public String login(){
 		System.out.println("Hello");
-		switch(type){
-		case "学生":
+		if(type.equals("学生")){
 			if(studentService.checkLogIn(username, password))
 				return "student";
 			else
 				return "loginError";
-		case "老师":
+		}
+		else if(type.equals("老师")){
 			Teacher tea = teacherService.checkLogIn(username, password);
 			if(tea != null)
 				return "teacher";
 			else
 				return "loginError";
-		case "管理员":
+		}
+		else if(type.equals("管理员")){
 			Teacher admin = teacherService.checkLogIn(username, password);
 			if(admin.getType())
 				return "admin";

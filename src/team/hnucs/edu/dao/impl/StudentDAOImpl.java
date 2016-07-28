@@ -18,6 +18,8 @@ public class StudentDAOImpl extends HibernateDaoSupport implements StudentDAO{
 	public Student checkLogIn(String stuNum, String password) {
 		// TODO Auto-generated method stub
 		Student instance = this.queryById(stuNum);
+		if(instance != null)
+			System.out.println(instance.getStuMinority());
 		return instance;
 	}
 
