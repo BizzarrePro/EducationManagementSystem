@@ -3,19 +3,19 @@
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>
-<!DOCTYPE html PUBLIC html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+%><!DOCTYPE html PUBLIC html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>home page</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="css/homestyle.css">
+  <link rel="stylesheet" type="text/css" href="homestyle.css">
+  <link href="css/home.css" type="text/css" rel="stylesheet" />
 </head>
 </head>
 <body>
   <div id="container">
     <div id="head">
-      <img src="images/title.png" style="margin-top:20px">
+      <img  class="title" src="images/title.png" style="margin-top:20px">
     </div>
     <!--新闻展示栏-->
     <div id="banner">
