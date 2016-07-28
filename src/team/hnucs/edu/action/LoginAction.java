@@ -1,16 +1,21 @@
 package team.hnucs.edu.action;
 
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
 import team.hnucs.edu.entity.Teacher;
 import team.hnucs.edu.service.StudentService;
 import team.hnucs.edu.service.TeacherService;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-public class LoginAction extends ActionSupport {
+public class LoginAction extends ActionSupport implements SessionAware{
 	private static final long serialVersionUID = 1L;
 	private String username;
 	private String password;
 	private String type;
+	private Map<String, Object> session;
 	public String getUsername(){
 		return username;
 	}
@@ -43,11 +48,19 @@ public class LoginAction extends ActionSupport {
 	public TeacherService getTeacherService(){
 		return teacherService;
 	}
+	@Override
+	public void setSession(Map<String, Object> session) {
+		// TODO Auto-generated method stub
+		this.session = session;
+	}
 	public String login(){
 		System.out.println("Hello");
 		if(type.equals("Ñ§Éú")){
-			if(studentService.checkLogIn(username, password))
+			if(studentService.checkLogIn(username, password)){
+				session.put("username", username);
+				session.put("password", password);
 				return "student";
+			}
 			else
 				return "loginError";
 		}
@@ -68,7 +81,6 @@ public class LoginAction extends ActionSupport {
 		return "loginError";
 	}
 	public String execute(){
-		System.out.println("excute");
-		return "teacher";
+		return "homepage";
 	}
 }

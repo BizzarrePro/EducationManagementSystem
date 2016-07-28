@@ -9,7 +9,7 @@
 			<result name="student">/student.jsp</result>
 			<result name="teacher">/teacher.jsp</result>
 			<result name="administrator">/teacher.jsp</result>
-			<result name="loginError">/teacher.jsp</result>
+			<result name="loginError">/index.jsp</result>
 		</action>
 	</package>
 </struts>

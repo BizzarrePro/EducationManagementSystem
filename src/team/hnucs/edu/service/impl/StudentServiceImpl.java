@@ -27,52 +27,59 @@ public class StudentServiceImpl implements StudentService{
 	}
 
 	@Override
-	public void delete(String stuNum) {
+	public boolean delete(String stuNum) {
 		// TODO Auto-generated method stub
-		
+		return studentDAO.delete(stuNum);
 	}
 
 	@Override
 	public Student queryById(String stuNum) {
 		// TODO Auto-generated method stub
-		return null;
+		Student stu = studentDAO.queryById(stuNum);
+		return stu;
 	}
 
 	@Override
 	public List<Student> queryByClass(String acadamy, String major,
 			String stuClass) {
 		// TODO Auto-generated method stub
-		return null;
+		List<Student> list = studentDAO.queryByClass(acadamy, major, stuClass);
+		return list;
 	}
 
 	@Override
-	public void updatePassword(String password) {
+	public void updatePassword(String stuNum, String password) {
 		// TODO Auto-generated method stub
-		
+		studentDAO.updatePassword(stuNum, password);
 	}
 
 	@Override
 	public void updateInfo(Student stu) {
 		// TODO Auto-generated method stub
-		
+		studentDAO.updateInfo(stu);
 	}
 
 	@Override
 	public List<Score> queryScore(String stuNum) {
 		// TODO Auto-generated method stub
-		return null;
+		return studentDAO.queryScore(stuNum);
 	}
 
 	@Override
 	public List<ExamArrangement> queryExamRoom(String stuNum) {
 		// TODO Auto-generated method stub
-		return null;
+		return studentDAO.queryExamRoom(stuNum);
 	}
 
 	@Override
 	public List<CourseSelection> queryCourseSelectionResult(String stuNum) {
 		// TODO Auto-generated method stub
-		return null;
+		return studentDAO.queryCourseSelectionResult(stuNum);
+	}
+	@Override
+	public void save(Student stu) {
+		// TODO Auto-generated method stub
+		studentDAO.save(stu);
 	}
 
 }

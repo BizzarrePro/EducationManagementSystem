@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.dao.DataAccessException;
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 
 import team.hnucs.edu.dao.StudentDAO;
@@ -74,7 +75,7 @@ public class StudentDAOImpl extends HibernateDaoSupport implements StudentDAO{
 		// TODO Auto-generated method stub
 		log.debug("update student password");
 		try{
-			Student instance = (Student) this.getHibernateTemplate().get("team.hnucs.edu.entity.Student", stuNum);
+			Student instance = (Student) this.getHibernateTemplate().get("team.hn)ucs.edu.entity.Student", stuNum);
 			instance.setPassword(password);
 			this.getHibernateTemplate().update(instance);
 		} catch(RuntimeException e){
@@ -95,22 +96,63 @@ public class StudentDAOImpl extends HibernateDaoSupport implements StudentDAO{
 		}
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Score> queryScore(String stuNum) {
 		// TODO Auto-generated method stub
-		return null;
+		log.debug("query score of student");
+		try{
+			Student instance = (Student)this.getHibernateTemplate().get("team.hn)ucs.edu.entity.Student", stuNum);
+			String hql = "FROM Score sc WHERE sc.student = "+instance;
+			List<Score> sc = (List<Score>) this.getHibernateTemplate().find(hql);
+			return sc;
+		} catch(RuntimeException e) {
+			log.error("query score failed", e);
+			throw e;
+		}
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<ExamArrangement> queryExamRoom(String stuNum) {
 		// TODO Auto-generated method stub
-		return null;
+		log.debug("query examination room of student");
+		try{
+			Student instance = (Student)this.getHibernateTemplate().get("team.hn)ucs.edu.entity.Student", stuNum);
+			String hql = "FROM ExamArrangement ex WHERE ex.student = "+instance;
+			List<ExamArrangement> sc = (List<ExamArrangement>) this.getHibernateTemplate().find(hql);
+			return sc;
+		} catch(RuntimeException e) {
+			log.error("query examination room failed", e);
+			throw e;
+		}
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<CourseSelection> queryCourseSelectionResult(String stuNum) {
 		// TODO Auto-generated method stub
-		return null;
+		log.debug("query course selection of student");
+		try{
+			Student instance = (Student)this.getHibernateTemplate().get("team.hn)ucs.edu.entity.Student", stuNum);
+			String hql = "FROM CourseSelection cour WHERE cour.student = "+instance;
+			List<CourseSelection> sc = (List<CourseSelection>) this.getHibernateTemplate().find(hql);
+			return sc;
+		} catch(RuntimeException e) {
+			log.error("query course selection failed", e);
+			throw e;
+		}
+	}
+	@Override
+	public void save(Student stu) {
+		// TODO Auto-generated method stub
+		log.debug("save student info");
+		try{
+			this.getHibernateTemplate().save(stu);
+		} catch(DataAccessException e) {
+			log.error("sace failed");
+			throw e;
+		}
 	}
 
 }

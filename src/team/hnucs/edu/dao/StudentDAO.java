@@ -12,6 +12,7 @@ public interface StudentDAO{
 	abstract List<Student> queryByClass(String acadamy, String major, String stuClass);
 	abstract void updatePassword(String stuNum, String password);
 	abstract void updateInfo(Student stu);
+	abstract void save(Student stu);
 	abstract List<Score> queryScore(String stuNum);
 	abstract List<ExamArrangement> queryExamRoom(String stuNum);
 	abstract List<CourseSelection> queryCourseSelectionResult(String stuNum);

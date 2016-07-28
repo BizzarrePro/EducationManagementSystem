@@ -24,7 +24,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    <h1>Hello EveryBody</h1>
+    <h1>Student Page</h1>
+    <%
+    HttpSession session = request.getSession();
+    out.println(out.printlnsession.getAttribute("username"));
+    out.println();
+    out.println(out.printlnsession.getAttribute("password"));
+     %>
     <center>
     	<s:bean name="com.entity.User" var="usr">
     		<s:param name="name" value="'20133'" >
