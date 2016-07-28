@@ -24,9 +24,20 @@ public class StudentDAOImpl extends HibernateDaoSupport implements StudentDAO{
 	}
 
 	@Override
-	public void delete(String stuNum) {
+	public boolean delete(String stuNum) {
 		// TODO Auto-generated method stub
-		
+		log.debug("delete Student information");
+		Student instance = this.queryById(stuNum);
+		if(instance != null){
+			try{
+				getHibernateTemplate().delete(instance);
+				return true;
+			} catch (RuntimeException e){
+				log.error("delete failed", e);
+				throw e;
+			}
+		}
+		return false;
 	}
 
 	@Override
@@ -42,23 +53,46 @@ public class StudentDAOImpl extends HibernateDaoSupport implements StudentDAO{
 		}
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
-	public List<Student> queryByClass(String acadamy, String major,
+	public List<Student> queryByClass(String academy, String major,
 			String stuClass) {
-		// TODO Auto-generated method stub
-		return null;
+		log.debug("query student by class information");
+		try{
+			String hql = "FROM Student s WHERE s.stuAcademy = '"+academy+"' AND s.stuMajor = '"+major+
+					"' AND s.stuClass = '"+stuClass+"'"; 
+			List<Student> list = (List<Student>) this.getHibernateTemplate().find(hql);
+			return list;
+		} catch (RuntimeException e){
+			log.error("get list failed", e);
+			throw e;
+		}
 	}
 
 	@Override
-	public void updatePassword(String password) {
+	public void updatePassword(String stuNum, String password) {
 		// TODO Auto-generated method stub
-		
+		log.debug("update student password");
+		try{
+			Student instance = (Student) this.getHibernateTemplate().get("team.hnucs.edu.entity.Student", stuNum);
+			instance.setPassword(password);
+			this.getHibernateTemplate().update(instance);
+		} catch(RuntimeException e){
+			log.error("update psw failed", e);
+			throw e;
+		}
 	}
 
 	@Override
 	public void updateInfo(Student stu) {
 		// TODO Auto-generated method stub
-		
+		log.debug("update student information");
+		try{
+			this.getHibernateTemplate().update(stu);
+		} catch(RuntimeException e){
+			log.error("update info failed", e);
+			throw e;
+		}
 	}
 
 	@Override
