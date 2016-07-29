@@ -58,7 +58,6 @@ public class LoginAction extends ActionSupport implements SessionAware{
 		if(type.equals("Ñ§Éú")){
 			if(studentService.checkLogIn(username, password)){
 				session.put("username", username);
-				session.put("password", password);
 				return "student";
 			}
 			else

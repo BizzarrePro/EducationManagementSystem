@@ -26,25 +26,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
     <h1>Student Page</h1>
     <%
-    HttpSession session = request.getSession();
-    out.println(out.printlnsession.getAttribute("username"));
-    out.println();
-    out.println(out.printlnsession.getAttribute("password"));
+    HttpSession se = request.getSession();
+    String user = (String)se.getAttribute("username");
+    String password = (String)se.getAttribute("password");
+    out.println(user+"\n");
+    out.println(password);
      %>
     <center>
-    	<s:bean name="com.entity.User" var="usr">
-    		<s:param name="name" value="'20133'" >
-    		</s:param>
-    		<s:param name="attribute" value="'13243445345'">
-    		</s:param>
-    	</s:bean>
-    	<s:property value="#usr.name"/> 
-    	<s:if test="#usr.attribute == null">
-    		SABI
-    	</s:if>
-    	<s:else>
-    		<s:property value="#usr.attribute"/> 
-    	</s:else>
        	<br/>
        	<s:property value="#hello.name"/>
     	<br/>
@@ -60,12 +48,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    	 	</s:iterator>
    	 	<!-- s:property> value="#list.get(0).num"/--><br/>	
     </center>
-        	<s:if test="#user1.num == 11111">
-        		You are administrator.
-        	</s:if>
-        	<s:else>
-        		You are a full guy.
-        	</s:else>
     <hr/>
   </body>
 </html>
