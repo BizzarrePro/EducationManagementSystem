@@ -22,13 +22,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div id="main">
       <ul id="nav">
           <li class="on"><a href="#" class="first">首页</a><div class="second">首页</div></li>
-            <li><a href="#">个人信息</a><div class="second">个人信息</div></li>
-            <li><a href="#">修改信息</a><div class="second">修改信息</div></li>
-            <li><a href="#">上传成绩</a><div class="second">上传成绩</div></li>
-            <li><a href="#">查看成绩</a><div class="second">查看成绩</div></li>
-            <li><a href="#">上传作业</a><div class="second">上传作业</div></li>
-            <li><a href="#">查看学生信息</a><div class="second">查看学生信息</div></li>
-            <li><a href="#">修改密码</a><div class="second">修改密码</div></li>
+            <li><a href="#">添加学生信息</a><div class="second">添加学生信息</div></li>
+            <li><a href="#">添加老师信息</a><div class="second">添加老师信息</div></li>
+            <li><a href="#">添加课程信息</a><div class="second">添加课程信息</div></li>
         </ul>
         <div class="dot"><ul><span></span></ul></div>
         <div id="slide"></div>

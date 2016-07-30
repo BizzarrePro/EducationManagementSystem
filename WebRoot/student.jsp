@@ -5,67 +5,73 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <base href="<%=basePath%>">
-    
-    <title>My JSP 'success.jsp' starting page</title>
-    
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
-	<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>功能导航</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/menustyle.css">
+  <link href="css/style.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.js">
+  </script>
+</head>
+<body>
+  <div id="container">
 
-  </head>
-  
-  <body>
-    <h1>Student Page</h1>
-    <%
-    HttpSession session = request.getSession();
-    out.println(out.printlnsession.getAttribute("username"));
-    out.println();
-    out.println(out.printlnsession.getAttribute("password"));
-     %>
-    <center>
-    	<s:bean name="com.entity.User" var="usr">
-    		<s:param name="name" value="'20133'" >
-    		</s:param>
-    		<s:param name="attribute" value="'13243445345'">
-    		</s:param>
-    	</s:bean>
-    	<s:property value="#usr.name"/> 
-    	<s:if test="#usr.attribute == null">
-    		SABI
-    	</s:if>
-    	<s:else>
-    		<s:property value="#usr.attribute"/> 
-    	</s:else>
-       	<br/>
-       	<s:property value="#hello.name"/>
-    	<br/>
-    	<s:property value="%{user1.name}"/><br/>
-   	 	<s:property value="#user1.attribute"/><br/> 
-   	 	<!-- s:property value="#list.get(0).num"/-->
-   	 	<s:iterator value="%{list}" var="p" status="st">
-   	 		<s:property/>
-   	 		<s:iterator value="#list.get(#st.index)" var="a">
-   	 			<s:property value="#a.name"/><br/>
-   	 		</s:iterator>
-   	 		<br/>
-   	 	</s:iterator>
-   	 	<!-- s:property> value="#list.get(0).num"/--><br/>	
-    </center>
-        	<s:if test="#user1.num == 11111">
-        		You are administrator.
-        	</s:if>
-        	<s:else>
-        		You are a full guy.
-        	</s:else>
-    <hr/>
-  </body>
+    <div id="banner">
+    <!-- 代码部分begin -->
+    <div id="main">
+      <ul id="nav">
+          <li class="on"><a href="#" class="first">首页</a><div class="second">首页</div></li>
+            <li><a href="#">个人信息</a><div class="second">个人信息</div></li>
+            <li><a href="#">修改信息</a><div class="second">修改信息</div></li>
+            <li><a href="#">选课</a><div class="second">选课</div></li>
+            <li><a href="#">选课结果</a><div class="second">选课结果</div></li>
+            <li><a href="#">查看作业</a><div class="second">查看作业</div></li>
+            <li><a href="#">成绩查询</a><div class="second">成绩查询</div></li>
+            <li><a href="#">修改密码</a><div class="second">修改密码</div></li>
+        </ul>
+        <div class="dot"><ul><span></span></ul></div>
+        <div id="slide"></div>
+    </div>
+    
+    
+    <script>
+    $(function(){
+      var liWidth = $('#main #nav li').width();
+      var secondWidth = $('#main #nav2 .second').width(); 
+      $('#main #nav li').hover(function(){
+        var index = $(this).index();
+        $('#main .dot span').stop().animate({
+          left:liWidth*index+'px'
+        },200);
+        $(this).addClass('on').siblings().removeClass('on');
+        $(this).find('.second').fadeIn(600);
+        $('#main #slide').stop().animate({
+          height:'250px'
+        },400);
+      },function(){
+        $(this).find('.second').fadeOut(600);
+        $('#main #slide').stop().animate({
+          height:'0'
+        },400);
+      });
+    });
+    </script>
+    <!-- 代码部分end -->
+    </div>
+
+
+    <div id="content">
+      
+    </div>
+
+
+    <div id="foot">
+      </br>
+      </br>
+          <p>copyright by Liu and Yang</p>
+    </div>
+  </div>
+</body>
 </html>
