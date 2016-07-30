@@ -1,5 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -23,13 +22,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div id="main">
       <ul id="nav">
           <li class="on"><a href="#" class="first">首页</a><div class="second">首页</div></li>
-            <li><a href="#">个人信息</a><div class="second">个人信息</div></li>
-            <li><a href="#">修改信息</a><div class="second">修改信息</div></li>
-            <li><a href="#">选课</a><div class="second">选课</div></li>
-            <li><a href="#">选课结果</a><div class="second">选课结果</div></li>
-            <li><a href="#">查看作业</a><div class="second">查看作业</div></li>
-            <li><a href="#">成绩查询</a><div class="second">成绩查询</div></li>
-            <li><a href="#">修改密码</a><div class="second">修改密码</div></li>
+            <li><a href="#">添加学生信息</a><div class="second">添加学生信息</div></li>
+            <li><a href="#">添加老师信息</a><div class="second">添加老师信息</div></li>
+            <li><a href="#">添加课程信息</a><div class="second">添加课程信息</div></li>
         </ul>
         <div class="dot"><ul><span></span></ul></div>
         <div id="slide"></div>
@@ -65,6 +60,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div id="content">
       
     </div>
+
+
     <div id="foot">
       </br>
       </br>
