@@ -22,8 +22,7 @@ public class StudentServiceImpl implements StudentService{
 		Student stu = studentDAO.checkLogIn(stuNum, password);
 		if(stu != null && stu.getPassword().equals(password))
 			return true;
-		else
-			return false;
+		return false;
 	}
 
 	@Override

@@ -60,6 +60,21 @@
 			<ref bean="studentDAO" />
 		</property>
 	</bean>
+	<bean id="scoreStuService" class="team.hnucs.edu.service.impl.ScoreServiceImpl">
+		<property name="studentDAO">
+			<ref bean="studentDAO" />
+		</property>
+	</bean>
+	<bean id="scoreScoService" class="team.hnucs.edu.service.impl.ScoreServiceImpl">
+		<property name="scoreDAO">
+			<ref bean="scoreDAO" />
+		</property>
+	</bean>
+	<bean id="scoreCouService" class="team.hnucs.edu.service.impl.ScoreServiceImpl">
+		<property name="courseDAO">
+			<ref bean="courseDAO" />
+		</property>
+	</bean>
 	<bean id="teacherService" class="team.hnucs.edu.service.impl.TeacherServiceImpl">
 		<property name="teacherDAO">
 			<ref bean="teacherDAO" />
@@ -70,7 +85,27 @@
 			<ref bean="sessionFactory" />
 		</property>
 	</bean>
+	<bean id="courseSelectionDAO" class="team.hnucs.edu.dao.impl.CourseSelectionDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="examArrangementDAO" class="team.hnucs.edu.dao.impl.ExamArrangementDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
 	<bean id="teacherDAO" class="team.hnucs.edu.dao.impl.TeacherDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="scoreDAO" class="team.hnucs.edu.dao.impl.ScoreDAOImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="courseDAO" class="team.hnucs.edu.dao.impl.CourseDAOImpl">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />
 		</property>

@@ -29,9 +29,9 @@ public class Student implements java.io.Serializable {
 	private String stuContactWay;
 	private Boolean semester;
 	private String password;
-	private Set scores = new HashSet(0);
-	private Set examArrangements = new HashSet(0);
-	private Set courseSelections = new HashSet(0);
+	private Set<Score> scores = new HashSet<Score>(0);
+	private Set<ExamArrangement> examArrangements = new HashSet<ExamArrangement>(0);
+	private Set<CourseSelection> courseSelections = new HashSet<CourseSelection>(0);
 
 	// Constructors
 
@@ -64,7 +64,7 @@ public class Student implements java.io.Serializable {
 			String stuAcademy, String stuMajor, String stuClass,
 			String stuPoliticalStatus, Date stuEnrollmentDate,
 			String stuContactWay, Boolean semester, String password,
-			Set scores, Set examArrangements, Set courseSelections) {
+			Set<Score> scores, Set<ExamArrangement> examArrangements, Set<CourseSelection> courseSelections) {
 		this.stuNum = stuNum;
 		this.stuName = stuName;
 		this.stuSex = stuSex;
@@ -207,27 +207,27 @@ public class Student implements java.io.Serializable {
 		this.password = password;
 	}
 
-	public Set getScores() {
+	public Set<Score> getScores() {
 		return this.scores;
 	}
 
-	public void setScores(Set scores) {
+	public void setScores(Set<Score> scores) {
 		this.scores = scores;
 	}
 
-	public Set getExamArrangements() {
+	public Set<ExamArrangement> getExamArrangements() {
 		return this.examArrangements;
 	}
 
-	public void setExamArrangements(Set examArrangements) {
+	public void setExamArrangements(Set<ExamArrangement> examArrangements) {
 		this.examArrangements = examArrangements;
 	}
 
-	public Set getCourseSelections() {
+	public Set<CourseSelection> getCourseSelections() {
 		return this.courseSelections;
 	}
 
-	public void setCourseSelections(Set courseSelections) {
+	public void setCourseSelections(Set<CourseSelection> courseSelections) {
 		this.courseSelections = courseSelections;
 	}
 

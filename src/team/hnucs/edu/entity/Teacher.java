@@ -25,8 +25,8 @@ public class Teacher implements java.io.Serializable {
 	private String teaContactWay;
 	private String teaPassword;
 	private Boolean type;
-	private Set courseSelections = new HashSet(0);
-	private Set courses = new HashSet(0);
+	private Set<CourseSelection> courseSelections = new HashSet<CourseSelection>(0);
+	private Set<Course> courses = new HashSet<Course>(0);
 
 	// Constructors
 
@@ -53,7 +53,7 @@ public class Teacher implements java.io.Serializable {
 	public Teacher(String teaNum, String teaName, String teaSex, Short teaAge,
 			Date teaBirth, String teaMinority, String teaDegree,
 			String teaProTitle, String teaContactWay, String teaPassword,
-			Boolean type, Set courseSelections, Set courses) {
+			Boolean type, Set<CourseSelection> courseSelections, Set<Course> courses) {
 		this.teaNum = teaNum;
 		this.teaName = teaName;
 		this.teaSex = teaSex;
@@ -159,19 +159,19 @@ public class Teacher implements java.io.Serializable {
 		this.type = type;
 	}
 
-	public Set getCourseSelections() {
+	public Set<CourseSelection> getCourseSelections() {
 		return this.courseSelections;
 	}
 
-	public void setCourseSelections(Set courseSelections) {
+	public void setCourseSelections(Set<CourseSelection> courseSelections) {
 		this.courseSelections = courseSelections;
 	}
 
-	public Set getCourses() {
+	public Set<Course> getCourses() {
 		return this.courses;
 	}
 
-	public void setCourses(Set courses) {
+	public void setCourses(Set<Course> courses) {
 		this.courses = courses;
 	}
 

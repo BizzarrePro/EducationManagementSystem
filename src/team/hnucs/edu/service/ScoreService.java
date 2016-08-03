@@ -8,9 +8,8 @@ import team.hnucs.edu.entity.ScoreId;
 import team.hnucs.edu.entity.Student;
 
 public interface ScoreService {
-	abstract List<Score> findAll();
-	abstract void add(Student stu, Course cour, ScoreId sc);
+	abstract List<Score> findAllbyCourse(String courseName);
+	abstract void add(Score score);
 	abstract List<Score> findById(String stuNum);
 	abstract void delete(String courName, String stuNum);
-	
 }

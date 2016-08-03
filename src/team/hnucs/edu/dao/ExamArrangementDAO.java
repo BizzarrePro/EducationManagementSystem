@@ -4,9 +4,10 @@ import java.util.List;
 
 import team.hnucs.edu.entity.ExamArrangement;
 import team.hnucs.edu.entity.ExamArrangementId;
+import team.hnucs.edu.entity.Student;
 
 public interface ExamArrangementDAO {
-	abstract List<ExamArrangement> findClass(String acadamy, String major, String stuClass);
-	abstract ExamArrangement findById(String stuNum);
-	abstract void AssignExamination(ExamArrangementId assignExamination);
+	abstract List<ExamArrangement> findById(Student stu);
+	abstract void assignExamination(ExamArrangement assignExamination);
+	abstract void deleteExamination(ExamArrangement assignExamination);
 }
