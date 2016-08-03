@@ -11,15 +11,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <title>功能导航</title>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="css/menustyle.css">
-  <style type="text/css">
-      .tablecss{
-        background:#00FF7F url(images/star.jpg);
-        background-size:870px auto
-        opacity:0.55;
-        width:870px;
-      }
-    </style>
   <link href="css/style.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="css/table.css">
   <script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.js">
   </script>
 </head>

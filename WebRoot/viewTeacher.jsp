@@ -11,6 +11,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <title>功能导航</title>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="css/menustyle.css">
+  <link rel="stylesheet" type="text/css" href="css/table.css">
   <style type="text/css">
       .tablecss{
         background:#00FF7F url(images/star.jpg);
