@@ -12,6 +12,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="css/menustyle.css">
   <link href="css/style.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="css/table.css">
   <script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.js">
   </script>
 </head>
@@ -63,7 +64,28 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
     <div id="content">
-      <h1>添加课程失败</h1>
+     <center>
+    <table align="center" border="1" cellpadding="5" class="tablecss" >
+      <tr>
+        <th style="text-align: center">学号</th>
+        <th style="text-align: center">姓名</th>
+        <th style="text-align: center">课程编号</th>
+        <th style="text-align: center">课程</th>
+        <th style="text-align: center">删除</th>
+      </tr>
+      <s:iterator value='myCourses'>
+        <tr>
+          <td><s:property value="sid" /></td>
+          <td><s:property value="sname" /></td>
+          <td><s:property value="cid" /></td>
+          <td><s:property value="cname" /></td>
+          <td><a
+            href="DeleteMyCourse.action?myCourse.id=<s:property value="id"/>">删除</a></td>
+        </tr>
+      </s:iterator>
+    </table>
+
+  </center>
     </div>
 
 

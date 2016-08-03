@@ -63,28 +63,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
     <div id="content">
-    <s:form action="AddCourse" method="post" theme="simple">
-      <p>
-        课程号：
-        <s:textfield name="course.cid"></s:textfield>
-      <p>
-        课程名：
-        <s:textfield name="course.cname"></s:textfield>
-      <p>
-        开课学期：
-        <s:textfield name="course.kkxq"></s:textfield>
-      <p>
-        课程学时：
-        <s:textfield name="course.xs"></s:textfield>
-      <p>
-        课程学分：
-        <s:textfield name="course.xf"></s:textfield>
-      <p>
-        <s:submit value="确定"></s:submit>
-        <s:reset value="重置"></s:reset>
-    </s:form>
-
-    <s:fielderror></s:fielderror>
+  <center>
+    <h1>删除课程信息失败</h1>
+      <a href="ViewCourses.action">查看课程信息</a>
+  </center>
     </div>
 
 

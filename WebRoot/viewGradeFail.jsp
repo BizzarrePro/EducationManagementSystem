@@ -63,7 +63,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
     <div id="content">
-       <h1 align="center">显示学生信息失败</h1>
+       <h1>显示成绩信息失败</h1>
     </div>
 
 
