@@ -57,12 +57,11 @@ public class CourseSelectionDAOImpl extends HibernateDaoSupport implements Cours
 	}
 
 	@Override
-	public void delete(Student stu, Course cour) {
+	public void delete(CourseSelection cs) {
 		// TODO Auto-generated method stub
 		log.debug("delete course selection");
 		try {
-			String hql = "FROM CourseSelection cs WHERE cs.course = " + cour + " AND cs.student = " + stu;
-			super.getHibernateTemplate().delete(hql);
+			super.getHibernateTemplate().delete(cs);
 		} catch (RuntimeException e){
 			log.error("delete failed", e);
 			throw e;

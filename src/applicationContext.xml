@@ -60,24 +60,34 @@
 			<ref bean="studentDAO" />
 		</property>
 	</bean>
-	<bean id="scoreStuService" class="team.hnucs.edu.service.impl.ScoreServiceImpl">
+	<bean id="teacherService" class="team.hnucs.edu.service.impl.TeacherServiceImpl">
+		<property name="teacherDAO">
+			<ref bean="teacherDAO" />
+		</property>
+	</bean>
+	<bean id="scoreService" class="team.hnucs.edu.service.impl.ScoreServiceImpl">
 		<property name="studentDAO">
 			<ref bean="studentDAO" />
 		</property>
-	</bean>
-	<bean id="scoreScoService" class="team.hnucs.edu.service.impl.ScoreServiceImpl">
 		<property name="scoreDAO">
 			<ref bean="scoreDAO" />
 		</property>
-	</bean>
-	<bean id="scoreCouService" class="team.hnucs.edu.service.impl.ScoreServiceImpl">
 		<property name="courseDAO">
 			<ref bean="courseDAO" />
 		</property>
 	</bean>
-	<bean id="teacherService" class="team.hnucs.edu.service.impl.TeacherServiceImpl">
+	<bean id="courseSelectionService" class="team.hnucs.edu.service.impl.CourseSelectionServiceImpl">
+		<property name="courseSelectionDAO">
+			<ref bean="courseSelectionDAO" />
+		</property>
 		<property name="teacherDAO">
 			<ref bean="teacherDAO" />
+		</property>
+		<property name="studentDAO">
+			<ref bean="studentDAO" />
+		</property>
+		<property name="courseDAO">
+			<ref bean="courseDAO" />
 		</property>
 	</bean>
 	<bean id="studentDAO" class="team.hnucs.edu.dao.impl.StudentDAOImpl">
