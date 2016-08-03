@@ -63,6 +63,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
     <div id="content">
+    <center>
+  
     <s:form action="AddCourse" method="post" theme="simple">
       <p>
         课程号：
@@ -85,6 +87,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </s:form>
 
     <s:fielderror></s:fielderror>
+
+  </center>
     </div>
 
 

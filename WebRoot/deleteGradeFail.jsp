@@ -63,7 +63,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
     <div id="content">
-      <h1>添加课程失败</h1>
+  <center>
+    <h1>删除课程信息失败</h1>
+      <a href="ViewCourses.action">查看课程信息</a>
+  </center>
     </div>
 
 
