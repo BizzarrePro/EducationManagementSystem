@@ -11,6 +11,5 @@ public interface ScoreDAO {
 	abstract void save(Score score);
 	abstract void delete(Course cour, Student stu);
 	abstract List<Score> findById(Student stu);
-	abstract List<Score> findByClass(List<Student> stuList);
 	abstract List<Score> findAllbyCourse(Course cour);
 }

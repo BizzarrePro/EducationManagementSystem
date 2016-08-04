@@ -24,7 +24,7 @@ public class ScoreDAOImpl extends HibernateDaoSupport implements ScoreDAO{
 		try{
 			this.getHibernateTemplate().save(score);
 		} catch(DataAccessException e) {
-			log.error("sace failed");
+			log.error("save failed");
 			throw e;
 		}
 	}
@@ -42,23 +42,34 @@ public class ScoreDAOImpl extends HibernateDaoSupport implements ScoreDAO{
 		}
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Score> findById(Student stu) {
 		// TODO Auto-generated method stub
-		
-		return null;
+		log.debug("query student score");
+		try{
+			String hql = "FROM Score sco WHERE sco.student = "+stu;
+			List<Score> list = (List<Score>) this.getHibernateTemplate().find(hql);
+			return list;
+		} catch (RuntimeException e){
+			log.error("query failed", e);
+			throw e;
+		}
 	}
 
-	@Override
-	public List<Score> findByClass(List<Student> list) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Score> findAllbyCourse(Course cour) {
 		// TODO Auto-generated method stub
-		return null;
+		log.debug("query student score");
+		try{
+			String hql = "FROM Score sco WHERE sco.course = " + cour;
+			List<Score> list = (List<Score>) this.getHibernateTemplate().find(hql);
+			return list;
+		} catch (RuntimeException e){
+			log.error("query failed", e);
+			throw e;
+		}
 	}
 
 }

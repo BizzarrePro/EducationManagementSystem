@@ -13,7 +13,7 @@ import team.hnucs.edu.entity.ScoreId;
 import team.hnucs.edu.entity.Student;
 import team.hnucs.edu.service.ScoreService;
 
-public class ScoreServiceImpl extends HibernateDaoSupport implements ScoreService{
+public class ScoreServiceImpl implements ScoreService{
 	private ScoreDAO scoreDAO;
 	private StudentDAO studentDAO;
 	private CourseDAO courseDAO;

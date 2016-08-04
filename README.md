@@ -1,2 +1,2 @@
-# EduAdminSystem
-Implement an Educational Administration System
+# EducationManagementSystem
+Implement an education management system based SSH framework.

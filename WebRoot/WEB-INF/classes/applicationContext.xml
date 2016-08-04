@@ -65,6 +65,11 @@
 			<ref bean="teacherDAO" />
 		</property>
 	</bean>
+	<bean id="courseService" class="team.hnucs.edu.service.impl.CourseServiceImpl">
+		<property name="courseDAO">
+			<ref bean="courseDAO" />
+		</property>
+	</bean>
 	<bean id="scoreService" class="team.hnucs.edu.service.impl.ScoreServiceImpl">
 		<property name="studentDAO">
 			<ref bean="studentDAO" />
@@ -77,16 +82,16 @@
 		</property>
 	</bean>
 	<bean id="courseSelectionService" class="team.hnucs.edu.service.impl.CourseSelectionServiceImpl">
-		<property name="courseSelectionDAO">
+		<property name="courSelDao">
 			<ref bean="courseSelectionDAO" />
 		</property>
-		<property name="teacherDAO">
+		<property name="teacherDao">
 			<ref bean="teacherDAO" />
 		</property>
-		<property name="studentDAO">
+		<property name="studentDao">
 			<ref bean="studentDAO" />
 		</property>
-		<property name="courseDAO">
+		<property name="courDao">
 			<ref bean="courseDAO" />
 		</property>
 	</bean>
