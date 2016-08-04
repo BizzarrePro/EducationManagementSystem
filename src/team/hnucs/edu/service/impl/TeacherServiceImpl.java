@@ -23,7 +23,7 @@ public class TeacherServiceImpl implements TeacherService{
 	public Teacher checkLogIn(String teaNum, String password) {
 		// TODO Auto-generated method stub
 		Teacher teacher = teacherDAO.queryById(teaNum);
-		if(teacher.getTeaPassword().equals(password))
+		if(teacher != null && teacher.getTeaPassword().equals(password))
 			return teacher;
 		return null;
 	}

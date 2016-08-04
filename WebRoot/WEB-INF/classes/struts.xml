@@ -8,8 +8,11 @@
 		<action name="user" class="team.hnucs.edu.action.LoginAction" method="login">
 			<result name="student">/student.jsp</result>
 			<result name="teacher">/teacher.jsp</result>
-			<result name="administrator">/teacher.jsp</result>
-			<result name="loginError">/index.jsp</result>
+			<result name="administrator">/manager.jsp</result>
+			<result name="loginError">/Error.jsp</result>
+		</action>
+		<action name="student" class="team.hnucs.edu.action.AdministratorAction" method="saveInfo">
+			<result name="student">/student.jsp</result>
 		</action>
 	</package>
 </struts>

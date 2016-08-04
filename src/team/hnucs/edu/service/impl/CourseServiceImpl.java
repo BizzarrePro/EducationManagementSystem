@@ -8,6 +8,10 @@ import team.hnucs.edu.service.CourseService;
 
 public class CourseServiceImpl implements CourseService{
 	private CourseDAO courseDAO;
+	public void setCourseDAO(CourseDAO courseDAO) {
+		this.courseDAO = courseDAO;
+	}
+
 	@Override
 	public void save(Course cour) {
 		// TODO Auto-generated method stub

@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -18,13 +18,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <div id="container">
 
     <div id="banner">
-    <!-- 代码部分begin -->
     <div id="main">
       <ul id="nav">
           <li class="on"><a href="#" class="first">首页</a><div class="second">首页</div></li>
-            <li><a href="#">添加学生信息</a><div class="second">添加学生信息</div></li>
+            <li><a href="#">添加学生信息¯</a><div class="second">æ添加学生信息</div></li>
             <li><a href="#">添加老师信息</a><div class="second">添加老师信息</div></li>
-            <li><a href="#">添加课程信息</a><div class="second">添加课程信息</div></li>
+            <li><a href="#">添加课程信息¯</a><div class="second">添加课程信息</div></li>
         </ul>
         <div class="dot"><ul><span></span></ul></div>
         <div id="slide"></div>
@@ -53,12 +52,31 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       });
     });
     </script>
-    <!-- 代码部分end -->
+    <!-- ä»£ç é¨åend -->
     </div>
 
 
     <div id="content">
-      
+    	<center>
+	      <form action="student" method="get">
+	      		学号：<input type="text" style="text-indent:6px" name="stuNum"/>
+   				姓名：<input type="text"  style="text-indent:6px" name="stuName"/>
+   				性别	<input type="text"  style="text-indent:6px" name="stuSex"/></br>
+   				年龄：<input type="text"  style="text-indent:6px" name="stuAge"/>
+   				生日	<input type="date" name="stuBirth"/><br>
+   				民族：<input type="text"  style="text-indent:6px" name="stuMinority"/>
+   				籍贯：<input type="text"  style="text-indent:6px" name="stuRoot"/></br>
+   				学院：<input type="text"  style="text-indent:6px" name="stuAcademy"/>
+   				专业：<input type="text"  style="text-indent:6px" name="stuMajor"/>
+   				班级：<input type="text"  style="text-indent:6px" name="stuClass"/>
+   				政治面貌：<input type="text"  style="text-indent:6px" name="stuPoliticalStatus"/></br>
+   				入学时间：<input type="text" name="stuEnrollmentDate" value='<s:date name="stuEnrollmentDate" format="yyyy-MM-dd"/>'/><br>
+   				联系方式：<input type="text"  style="text-indent:6px" name="stuContactWay"/></br>
+   				学期：<input type="text"  style="text-indent:6px" name="semester"/>
+   				密码：<input type="text"  style="text-indent:6px" name="password"/>
+   				<input class="button" type="submit" value="提交"/>
+	      </form>
+     	 </center>
     </div>
 
 

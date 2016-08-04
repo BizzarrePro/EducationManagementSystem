@@ -12,7 +12,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" type="text/css" href="logintype.css">
 	<script type="text/javascript" src="JavaScript/jquery-3.1.0.js"></script>
 	<script type="text/javascript" src="./jquery.notesforlightbox.js"></script>
-     <script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+		function check(){
+			if(document.login.username.value==""){
+				alert("用户名不能为空！");
+				document.login.username.focus();
+				return false;
+			}
+			else if(document.login.password.value==""){
+				alert("密码不能为空！");
+				document.login.password.focus();
+				return false
+			}
+			return true;
+	}
+	</script>
 </head>
 <body>
 	<div id="container">
@@ -67,8 +82,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    		    </br>
    		 	<p>用户登录</p>
    		 </div>
-   			<form action="user" method="post">
-   			    
+   			<form name="login" action="user" method="post" onsubmit="return check()">
    				<input class="u user" type="text" style="text-indent:6px" name="username" placeholder="&nbsp用户名"></br>
    				<input class="u password" type="password"  style="text-indent:6px" name="password"  placeholder="&nbsp密码">
    				<label><input class="i student" type="radio" name="type" value="学生" checked="checked" >学生</label>
