@@ -150,7 +150,22 @@ public class StudentDAOImpl extends HibernateDaoSupport implements StudentDAO{
 		try{
 			this.getHibernateTemplate().save(stu);
 		} catch(DataAccessException e) {
-			log.error("sace failed");
+			log.error("save failed");
+			throw e;
+		}
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Student> queryAll() {
+		// TODO Auto-generated method stub
+		log.debug("query all student info");
+		try{
+			String hql = "FROM Student";
+			List<Student> list = (List<Student>) this.getHibernateTemplate().find(hql);
+			return list;
+		} catch(DataAccessException e) {
+			log.error("query all failed");
 			throw e;
 		}
 	}

@@ -4,11 +4,13 @@ import java.io.UnsupportedEncodingException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.struts2.ServletActionContext;
+import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.SessionAware;
 import org.springframework.context.annotation.Scope;
 
@@ -18,7 +20,7 @@ import team.hnucs.edu.service.StudentService;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
-public class AdminManageStudentAction extends ActionSupport implements SessionAware, ModelDriven<Student>{
+public class AdminManageStudentAction extends ActionSupport implements RequestAware, ModelDriven<Student>{
 	/**
 	 * 
 	 */
@@ -31,11 +33,11 @@ public class AdminManageStudentAction extends ActionSupport implements SessionAw
 	public StudentService getStuService() {
 		return stuService;
 	}
-	private Map<String, Object> session;
+	private Map<String, Object> req;
 	@Override
-	public void setSession(Map<String, Object> session) {
+	public void setRequest(Map<String, Object> req) {
 		// TODO Auto-generated method stub
-		this.session = session;
+		this.req = req;
 	}
 	@Override
 	public Student getModel() {
@@ -73,6 +75,11 @@ public class AdminManageStudentAction extends ActionSupport implements SessionAw
 		String studentNum = request.getParameter("stuNum");
 		stuService.delete(studentNum);
 		return "delete";
+	}
+	public String findAll(){
+		List<Student> list = stuService.queryAll();
+		req.put("studentList", list);
+		return "findAll";
 	}
 	
 

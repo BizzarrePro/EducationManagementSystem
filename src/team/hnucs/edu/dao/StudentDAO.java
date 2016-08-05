@@ -16,5 +16,6 @@ public interface StudentDAO{
 	abstract List<Score> queryScore(String stuNum);
 	abstract List<ExamArrangement> queryExamRoom(String stuNum);
 	abstract List<CourseSelection> queryCourseSelectionResult(String stuNum);
+	abstract List<Student> queryAll();
 	
 }

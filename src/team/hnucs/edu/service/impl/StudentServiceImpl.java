@@ -81,5 +81,10 @@ public class StudentServiceImpl implements StudentService{
 		System.out.println(stu);
 		studentDAO.save(stu);
 	}
+	@Override
+	public List<Student> queryAll() {
+		// TODO Auto-generated method stub
+		return studentDAO.queryAll();
+	}
 
 }

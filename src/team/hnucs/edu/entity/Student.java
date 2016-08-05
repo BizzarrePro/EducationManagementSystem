@@ -27,7 +27,7 @@ public class Student implements java.io.Serializable {
 	private String stuPoliticalStatus;
 	private Date stuEnrollmentDate;
 	private String stuContactWay;
-	private Boolean semester;
+	private Short semester;
 	private String password;
 	private Set<Score> scores = new HashSet<Score>(0);
 	private Set<ExamArrangement> examArrangements = new HashSet<ExamArrangement>(0);
@@ -63,7 +63,7 @@ public class Student implements java.io.Serializable {
 			Date stuBirth, String stuMinority, String stuRoot,
 			String stuAcademy, String stuMajor, String stuClass,
 			String stuPoliticalStatus, Date stuEnrollmentDate,
-			String stuContactWay, Boolean semester, String password,
+			String stuContactWay, Short semester, String password,
 			Set<Score> scores, Set<ExamArrangement> examArrangements, Set<CourseSelection> courseSelections) {
 		this.stuNum = stuNum;
 		this.stuName = stuName;
@@ -191,11 +191,11 @@ public class Student implements java.io.Serializable {
 		this.stuContactWay = stuContactWay;
 	}
 
-	public Boolean getSemester() {
+	public Short getSemester() {
 		return this.semester;
 	}
 
-	public void setSemester(Boolean semester) {
+	public void setSemester(Short semester) {
 		this.semester = semester;
 	}
 

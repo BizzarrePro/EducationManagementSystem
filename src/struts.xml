@@ -11,13 +11,26 @@
 			<result name="administrator">/manager.jsp</result>
 			<result name="loginError">/Error.jsp</result>
 		</action>
-		<action name="student" class="AdminManageStudentAction" method="save">
+		<action name="save_student" class="AdminManageStudentAction" method="save">
 			<result name="save">/manager.jsp</result>
+		</action>
+		<action name="save_teacher" class="AdminManageTeacherAction" method="save">
+			<result name="save">/manager.jsp</result>
+		</action>
+		<action name="update_teacher" class="AdminManageTeacherAction" method="update">
 			<result name="update">/manager.jsp</result>
 		</action>
-		<action name="teacher" class="AdminManageTeacherAction" method="save">
+		<action name="save_course" class="AdminManageCourseAction" method="save">
 			<result name="save">/manager.jsp</result>
-			<result name="update">/manager.jsp</result>
+		</action>
+		<action name="del_course" class="AdminManageCourseAction" method="delete">
+			<result name="delete">/manager.jsp</result>
+		</action>
+		<action name="del_student" class="AdminManageStudentAction" method="delete">
+			<result name="delete">/manager.jsp</result>
+		</action>
+		<action name="findall_student" class="AdminManageStudentAction" method="findAll">
+			<result name="findAll">/viewStudent.jsp</result>
 		</action>
 	</package>
 </struts>

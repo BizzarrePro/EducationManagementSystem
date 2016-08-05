@@ -79,7 +79,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
      	 </center>
      	 <!-- 添加老师 -->
      	 <center>
-	      <form action="teacher" method="post">
+	      <form action="save_teacher" method="post">
 	      		工号：<input type="text" style="text-indent:6px" name="teaNum"/>
    				姓名：<input type="text"  style="text-indent:6px" name="teaName"/>
    				性别	<input type="text"  style="text-indent:6px" name="teaSex"/></br>
@@ -97,7 +97,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
      	 </center>
      	  <!-- 修改学生信息 -->
      	 <center>
-	      <form action="student" method="post">
+	      <form action="save_student" method="post">
 	      		学号：<input type="text" style="text-indent:6px" name="stuNum"/>
    				姓名：<input type="text"  style="text-indent:6px" name="stuName"/>
    				性别	<input type="text"  style="text-indent:6px" name="stuSex"/></br>
@@ -118,7 +118,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
      	 </center>
      	  <!-- 修改老师信息 -->
      	 <center>
-	      <form action="teacher" method="post">
+	      <form action="update_teacher" method="post">
 	      		工号：<input type="text" style="text-indent:6px" name="teaNum"/>
    				姓名：<input type="text"  style="text-indent:6px" name="teaName"/>
    				性别	<input type="text"  style="text-indent:6px" name="teaSex"/></br>
@@ -134,6 +134,42 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    				<input class="button" type="submit" value="提交"/>
 	      </form>
      	 </center>
+     	 <!-- 添加课程信息 -->
+     	  <center>
+	      <form action="save_course" method="post">
+	      		课程号：<input type="text" style="text-indent:6px" name="courNum"/>
+   				课程名：<input type="text"  style="text-indent:6px" name="courName"/>
+   				代课教师：<input type="text"  style="text-indent:6px" name="tea"/></br>
+   				限制人数：<input type="text"  style="text-indent:6px" name="courLimitedNum"/>
+   				课程开始日期	<input type="text" name="courStart" placeholder="yyyy-MM-dd"/><br>
+   				课程学分：<input type="text"  style="text-indent:6px" name="courCredits"/>
+   				课程类型：<input type="text"  style="text-indent:6px" name="courType"/>
+   				已选课人数：<input type="text"  style="text-indent:6px" name="choosedNum"/>
+   				选课学期：<input type="text"  style="text-indent:6px" name="courseSemester"/></br>
+   				<input class="button" type="submit" value="提交"/>
+	      </form>
+     	 </center>
+     	 
+     	 <!-- 删除学生信息 -->
+     	 <center>
+	      <form action="del_student" method="post">
+	      		待删学生学号：<input type="text" style="text-indent:6px" name="stuNum"/>
+   				<input class="button" type="submit" value="提交"/>
+	      </form>
+     	 </center>
+     	 <!-- 删除课程信息 -->
+     	 <center>
+	      <form action="del_course" method="post">
+	      		待删学生课程号：<input type="text" style="text-indent:6px" name="courseNum"/>
+   				<input class="button" type="submit" value="提交"/>
+	      </form>
+     	 </center>
+     	  <center>
+	      <form action="findall_student" method="post">
+   				<input class="button" type="submit" value="提交"/>
+	      </form>
+     	 </center>
+     	 
     </div>
 
 
