@@ -23,10 +23,10 @@ public class Course implements java.io.Serializable {
 	private String courName;
 	private Short courLimitedNum;
 	private Date courStartDate;
-	private Boolean courCredits;
+	private Short courCredits;
 	private String courType;
 	private Short choosedNum;
-	private Boolean courseSemester;
+	private Short courseSemester;
 	private Set<Score> scores = new HashSet<Score>();
 	private Set<ExamArrangement> examArrangements = new HashSet<ExamArrangement>();
 	private Set<CourseSelection> courseSelections = new HashSet<CourseSelection>();
@@ -39,7 +39,7 @@ public class Course implements java.io.Serializable {
 
 	/** minimal constructor */
 	public Course(String courNum, Teacher teacher, String courName,
-			Short courLimitedNum, Date courStartDate, Boolean courCredits,
+			Short courLimitedNum, Date courStartDate, Short courCredits,
 			String courType) {
 		this.courNum = courNum;
 		this.teacher = teacher;
@@ -52,8 +52,8 @@ public class Course implements java.io.Serializable {
 
 	/** full constructor */
 	public Course(String courNum, Teacher teacher, String courName,
-			Short courLimitedNum, Date courStartDate, Boolean courCredits,
-			String courType, Short choosedNum, Boolean courseSemester,
+			Short courLimitedNum, Date courStartDate, Short courCredits,
+			String courType, Short choosedNum, Short courseSemester,
 			Set<Score> scores, Set<ExamArrangement> examArrangements, Set<CourseSelection> courseSelections) {
 		this.courNum = courNum;
 		this.teacher = teacher;
@@ -111,11 +111,11 @@ public class Course implements java.io.Serializable {
 		this.courStartDate = courStartDate;
 	}
 
-	public Boolean getCourCredits() {
+	public Short getCourCredits() {
 		return this.courCredits;
 	}
 
-	public void setCourCredits(Boolean courCredits) {
+	public void setCourCredits(Short courCredits) {
 		this.courCredits = courCredits;
 	}
 
@@ -135,11 +135,11 @@ public class Course implements java.io.Serializable {
 		this.choosedNum = choosedNum;
 	}
 
-	public Boolean getCourseSemester() {
+	public Short getCourseSemester() {
 		return this.courseSemester;
 	}
 
-	public void setCourseSemester(Boolean courseSemester) {
+	public void setCourseSemester(Short courseSemester) {
 		this.courseSemester = courseSemester;
 	}
 

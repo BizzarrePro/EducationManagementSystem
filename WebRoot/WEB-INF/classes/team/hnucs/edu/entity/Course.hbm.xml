@@ -24,7 +24,7 @@
             <column name="COUR_START_DATE" length="7" not-null="true" />
         </property>
         <property name="courCredits" type="java.lang.Boolean">
-            <column name="COUR_CREDITS" precision="1" scale="0" not-null="true" />
+            <column name="COUR_CREDITS" precision="2" scale="0" not-null="true" />
         </property>
         <property name="courType" type="java.lang.String">
             <column name="COUR_TYPE" length="10" not-null="true" />
@@ -33,7 +33,7 @@
             <column name="CHOOSED_NUM" precision="3" scale="0" />
         </property>
         <property name="courseSemester" type="java.lang.Boolean">
-            <column name="COURSE_SEMESTER" precision="1" scale="0" />
+            <column name="COURSE_SEMESTER" precision="2" scale="0" />
         </property>
         <set name="scores" inverse="true">
             <key>

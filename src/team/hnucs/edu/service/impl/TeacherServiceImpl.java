@@ -61,5 +61,10 @@ public class TeacherServiceImpl implements TeacherService{
 		// TODO Auto-generated method stub
 		return teacherDAO.queryById(teaNum);
 	}
+	@Override
+	public void save(Teacher tea) {
+		// TODO Auto-generated method stub
+		teacherDAO.save(tea);
+	}
 
 }

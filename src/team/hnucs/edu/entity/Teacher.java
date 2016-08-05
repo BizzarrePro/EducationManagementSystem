@@ -174,5 +174,13 @@ public class Teacher implements java.io.Serializable {
 	public void setCourses(Set<Course> courses) {
 		this.courses = courses;
 	}
-
+	@Override
+	public String toString() {
+		return "Teacher [teaNum=" + teaNum + ", teaName=" + teaName
+				+ ", teaSex=" + teaSex + ", teaAge=" + teaAge + ", teaBirth="
+				+ teaBirth + ", teaMinority=" + teaMinority + ", teaDegree="
+				+ teaDegree + ", teaProTitle=" + teaProTitle
+				+ ", teaContactWay=" + teaContactWay + ", teaPassword="
+				+ teaPassword + ", type=" + type + "]";
+	}
 }

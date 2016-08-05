@@ -13,4 +13,5 @@ public interface TeacherService {
 	abstract List<Student> queryStuOfCourse(String teaNum, String course);
 	abstract void updateInfo(Teacher tea);
 	abstract Teacher queryById(String teaNum);
+	abstract void save(Teacher tea);
 }

@@ -55,25 +55,82 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <!-- ä»£ç é¨åend -->
     </div>
 
-
+	<!-- 添加学生 -->
     <div id="content">
     	<center>
-	      <form action="student" method="get">
+	      <form action="student" method="post">
 	      		学号：<input type="text" style="text-indent:6px" name="stuNum"/>
    				姓名：<input type="text"  style="text-indent:6px" name="stuName"/>
    				性别	<input type="text"  style="text-indent:6px" name="stuSex"/></br>
    				年龄：<input type="text"  style="text-indent:6px" name="stuAge"/>
-   				生日	<input type="date" name="stuBirth"/><br>
+   				生日	<input type="text" name="stuBir" placeholder="yyyy-MM-dd"/><br>
    				民族：<input type="text"  style="text-indent:6px" name="stuMinority"/>
    				籍贯：<input type="text"  style="text-indent:6px" name="stuRoot"/></br>
    				学院：<input type="text"  style="text-indent:6px" name="stuAcademy"/>
    				专业：<input type="text"  style="text-indent:6px" name="stuMajor"/>
    				班级：<input type="text"  style="text-indent:6px" name="stuClass"/>
    				政治面貌：<input type="text"  style="text-indent:6px" name="stuPoliticalStatus"/></br>
-   				入学时间：<input type="text" name="stuEnrollmentDate" value='<s:date name="stuEnrollmentDate" format="yyyy-MM-dd"/>'/><br>
+   				入学时间：<input type="text" name="stuEnrollment" placeholder="yyyy-MM-dd"/><br>
    				联系方式：<input type="text"  style="text-indent:6px" name="stuContactWay"/></br>
    				学期：<input type="text"  style="text-indent:6px" name="semester"/>
-   				密码：<input type="text"  style="text-indent:6px" name="password"/>
+   				密码：<input type="text"  style="text-indent:6px" name="password"/></br>
+   				<input class="button" type="submit" value="提交"/>
+	      </form>
+     	 </center>
+     	 <!-- 添加老师 -->
+     	 <center>
+	      <form action="teacher" method="post">
+	      		工号：<input type="text" style="text-indent:6px" name="teaNum"/>
+   				姓名：<input type="text"  style="text-indent:6px" name="teaName"/>
+   				性别	<input type="text"  style="text-indent:6px" name="teaSex"/></br>
+   				年龄：<input type="text"  style="text-indent:6px" name="teaAge"/>
+   				生日	<input type="text" name="teaBir" placeholder="yyyy-MM-dd"/><br>
+   				民族：<input type="text"  style="text-indent:6px" name="teaMinority"/>
+   				学位：<input type="text"  style="text-indent:6px" name="teaDegree"/>
+   				职称：<input type="text"  style="text-indent:6px" name="teaProTitle"/>
+   				联系方式：<input type="text"  style="text-indent:6px" name="teaContactWay"/></br>
+   				密码：<input type="text"  style="text-indent:6px" name="teaPassword"/></br>
+   				<label><input type="radio" name="userType" value="管理员" checked="checked" >管理员</label>
+   				<label><input type="radio" name="userType" value="教师" >教师</label>
+   				<input class="button" type="submit" value="提交"/>
+	      </form>
+     	 </center>
+     	  <!-- 修改学生信息 -->
+     	 <center>
+	      <form action="student" method="post">
+	      		学号：<input type="text" style="text-indent:6px" name="stuNum"/>
+   				姓名：<input type="text"  style="text-indent:6px" name="stuName"/>
+   				性别	<input type="text"  style="text-indent:6px" name="stuSex"/></br>
+   				年龄：<input type="text"  style="text-indent:6px" name="stuAge"/>
+   				生日	<input type="text" name="stuBir" placeholder="yyyy-MM-dd"/><br>
+   				民族：<input type="text"  style="text-indent:6px" name="stuMinority"/>
+   				籍贯：<input type="text"  style="text-indent:6px" name="stuRoot"/></br>
+   				学院：<input type="text"  style="text-indent:6px" name="stuAcademy"/>
+   				专业：<input type="text"  style="text-indent:6px" name="stuMajor"/>
+   				班级：<input type="text"  style="text-indent:6px" name="stuClass"/>
+   				政治面貌：<input type="text"  style="text-indent:6px" name="stuPoliticalStatus"/></br>
+   				入学时间：<input type="text" name="stuEnrollment" placeholder="yyyy-MM-dd"/><br>
+   				联系方式：<input type="text"  style="text-indent:6px" name="stuContactWay"/></br>
+   				学期：<input type="text"  style="text-indent:6px" name="semester"/>
+   				密码：<input type="text"  style="text-indent:6px" name="password"/></br>
+   				<input class="button" type="submit" value="提交"/>
+	      </form>
+     	 </center>
+     	  <!-- 修改老师信息 -->
+     	 <center>
+	      <form action="teacher" method="post">
+	      		工号：<input type="text" style="text-indent:6px" name="teaNum"/>
+   				姓名：<input type="text"  style="text-indent:6px" name="teaName"/>
+   				性别	<input type="text"  style="text-indent:6px" name="teaSex"/></br>
+   				年龄：<input type="text"  style="text-indent:6px" name="teaAge"/>
+   				生日	<input type="text" name="teaBir" placeholder="yyyy-MM-dd"/><br>
+   				民族：<input type="text"  style="text-indent:6px" name="teaMinority"/>
+   				学位：<input type="text"  style="text-indent:6px" name="teaDegree"/>
+   				职称：<input type="text"  style="text-indent:6px" name="teaProTitle"/>
+   				联系方式：<input type="text"  style="text-indent:6px" name="teaContactWay"/></br>
+   				密码：<input type="text"  style="text-indent:6px" name="teaPassword"/></br>
+   				<label><input type="radio" name="userType" value="管理员" checked="checked" >管理员</label>
+   				<label><input type="radio" name="userType" value="教师" >教师</label>
    				<input class="button" type="submit" value="提交"/>
 	      </form>
      	 </center>

@@ -2,8 +2,15 @@
 <beans
 	xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:p="http://www.springframework.org/schema/p"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd" xmlns:tx="http://www.springframework.org/schema/tx">
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+                    http://www.springframework.org/schema/beans/spring-beans-4.1.xsd 
+                    http://www.springframework.org/schema/tx 
+                    http://www.springframework.org/schema/tx/spring-tx.xsd 
+                    http://www.springframework.org/schema/aop
+                    http://www.springframework.org/schema/aop/spring-aop.xsd"
+                    xmlns:tx="http://www.springframework.org/schema/tx">
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="url">
 			<value>jdbc:oracle:thin:@localhost:1521:orcl</value>
@@ -45,6 +52,17 @@
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 	<tx:annotation-driven transaction-manager="transactionManager" />
+	<aop:config>
+		<aop:pointcut id="txServices" expression="execution(* team.hnucs.edu.service..*.*(..))"/>
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txServices"/>
+	</aop:config>
+	
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="save*" propagation="REQUIRED"/>
+			<tx:method name="update*" propagation="REQUIRED"/>
+		</tx:attributes>
+	</tx:advice>
 	<bean id="TeacherLoginAction" class="team.hnucs.edu.action.LoginAction">
 		<property name="teacherService">
 			<ref bean="teacherService" />
@@ -53,9 +71,14 @@
 			<ref bean="studentService" />
 		</property>
 	</bean>
-	<bean id="AdministratorAction" class="team.hnucs.edu.action.AdministratorAction">
+	<bean id="AdminManageStudentAction" class="team.hnucs.edu.action.admin.AdminManageStudentAction">
 		<property name="stuService">
 			<ref bean="studentService" />
+		</property>
+	</bean>
+	<bean id="AdminManageTeacherAction" class="team.hnucs.edu.action.admin.AdminManageTeacherAction">
+		<property name="teacherService">
+			<ref bean="teacherService" />
 		</property>
 	</bean>
 	<bean id="studentService" class="team.hnucs.edu.service.impl.StudentServiceImpl">

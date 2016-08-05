@@ -231,4 +231,17 @@ public class Student implements java.io.Serializable {
 		this.courseSelections = courseSelections;
 	}
 
+	@Override
+	public String toString() {
+		return "Student [stuNum=" + stuNum + ", stuName=" + stuName
+				+ ", stuSex=" + stuSex + ", stuAge=" + stuAge + ", stuBirth="
+				+ stuBirth + ", stuMinority=" + stuMinority + ", stuRoot="
+				+ stuRoot + ", stuAcademy=" + stuAcademy + ", stuMajor="
+				+ stuMajor + ", stuClass=" + stuClass + ", stuPoliticalStatus="
+				+ stuPoliticalStatus + ", stuEnrollmentDate="
+				+ stuEnrollmentDate + ", stuContactWay=" + stuContactWay
+				+ ", semester=" + semester + ", password=" + password
+				+ "]";
+	}
+
 }

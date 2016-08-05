@@ -78,6 +78,7 @@ public class StudentServiceImpl implements StudentService{
 	@Override
 	public void save(Student stu) {
 		// TODO Auto-generated method stub
+		System.out.println(stu);
 		studentDAO.save(stu);
 	}
 

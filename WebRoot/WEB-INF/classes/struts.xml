@@ -11,8 +11,13 @@
 			<result name="administrator">/manager.jsp</result>
 			<result name="loginError">/Error.jsp</result>
 		</action>
-		<action name="student" class="team.hnucs.edu.action.AdministratorAction" method="saveInfo">
-			<result name="student">/student.jsp</result>
+		<action name="student" class="AdminManageStudentAction" method="save">
+			<result name="save">/manager.jsp</result>
+			<result name="update">/manager.jsp</result>
+		</action>
+		<action name="teacher" class="AdminManageTeacherAction" method="save">
+			<result name="save">/manager.jsp</result>
+			<result name="update">/manager.jsp</result>
 		</action>
 	</package>
 </struts>
