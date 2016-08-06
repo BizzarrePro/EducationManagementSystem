@@ -1,9 +1,9 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -24,10 +24,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <li class="on"><a href="#" class="first">首页</a><div class="second">首页</div></li>
             <li><a href="#">个人信息</a><div class="second">个人信息</div></li>
             <li><a href="#">修改信息</a><div class="second">修改信息</div></li>
-            <li><a href="#">上传成绩</a><div class="second">上传成绩</div></li>
-            <li><a href="#">查看成绩</a><div class="second">查看成绩</div></li>
-            <li><a href="#">上传作业</a><div class="second">上传作业</div></li>
-            <li><a href="#">查看学生信息</a><div class="second">查看学生信息</div></li>
+            <li><a href="#">选课</a><div class="second">选课</div></li>
+            <li><a href="#">选课结果</a><div class="second">选课结果</div></li>
+            <li><a href="#">查看作业</a><div class="second">查看作业</div></li>
+            <li><a href="#">成绩查询</a><div class="second">成绩查询</div></li>
             <li><a href="#">修改密码</a><div class="second">修改密码</div></li>
         </ul>
         <div class="dot"><ul><span></span></ul></div>
@@ -62,7 +62,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
     <div id="content">
-      	
+    <center>
+    <h1>修改教师信息成功</h1>
+    <a href="ViewTeachers.action">显示教师信息</a>
+  </center>
     </div>
 
 

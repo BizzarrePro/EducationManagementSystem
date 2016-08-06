@@ -1,10 +1,9 @@
 
 		.tablecss{
-			width: 500px;
+			width: 800px;
 			margin: 50px 0px 0px 0px;
-			border: 2px solid white;
-			border-collapse: collapse;
+			border: 3px solid white;
 			border-spacing: 2px;
-			background-color: green;
+			background-color: #e46b12;
 			color: white;
 		}
