@@ -62,10 +62,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
     <div id="content">
+<<<<<<< HEAD:WebRoot/teacher.jsp
+      	
+=======
     <center>
     <h1>修改成绩信息成功</h1>
       <a href="mainAdmin.jsp">返回首页</a>
   </center>
+>>>>>>> 6e56e7185809496c871e873cfd312b3494b83f6d:WebRoot/modifyGradeSuccess.jsp
     </div>
 
 
