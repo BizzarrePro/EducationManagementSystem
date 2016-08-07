@@ -92,4 +92,15 @@ public class CourseDAOImpl extends HibernateDaoSupport implements CourseDAO {
 		}
 	}
 
+	@Override
+	public void updateCourse(Course cour) {
+		// TODO Auto-generated method stub
+		try{
+			this.getHibernateTemplate().update(cour);
+		} catch (RuntimeException e){
+			log.error("update failed", e);
+			throw e;
+		}
+	}
+
 }

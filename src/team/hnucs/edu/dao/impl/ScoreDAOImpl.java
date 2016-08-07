@@ -72,4 +72,21 @@ public class ScoreDAOImpl extends HibernateDaoSupport implements ScoreDAO{
 		}
 	}
 
+	@Override
+	public void updateScore(Student stu, Course cour, Byte score) {
+		// TODO Auto-generated method stub
+		log.debug("update student score");
+		try{
+			String hql = "FROM Score sco WHERE sco.student = "+stu+" AND sco.course = "+cour;
+			Score sc = (Score) this.getHibernateTemplate().find(hql);
+			ScoreId id = sc.getId();
+			id.setScore(score);
+			sc.setId(id);
+			this.getHibernateTemplate().save(sc);
+		} catch (RuntimeException e){
+			log.error("update failed", e);
+			throw e;
+		}
+	}
+
 }

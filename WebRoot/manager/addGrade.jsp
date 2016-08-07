@@ -64,9 +64,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
     <div id="content">
     <center>
-		<form action="save_score" method="post">
+		<form action="admin_save_score" method="post">
 				学生号：<input type="text" style="text-indent:6px" name="stuNum"/>
 	      		课程名：<input type="text" style="text-indent:6px" name="courName"/>
+	      		教师号：<input type="text" style="text-indent:6px" name="teaName"/>
 	      		学期：<input type="text" style="text-indent:6px" name="semester"/>
 	      		分数：<input type="text" style="text-indent:6px" name="score"/>
    				<input class="button" type="submit" value="添加"/>

@@ -12,4 +12,5 @@ public interface ScoreService {
 	abstract void add(Score score);
 	abstract List<Score> findById(String stuNum);
 	abstract void delete(String courName, String stuNum);
+	abstract void updateScore(String stuNum, String courName, Byte score);
 }

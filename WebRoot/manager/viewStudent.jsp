@@ -102,13 +102,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </div>
     <!-- 查看所有学生信息 -->
      <center>
-	      <form action="findall_student" method="post">
+	      <form action="admin_findall_student" method="post">
    				<input class="button" type="submit" value="提交"/>
 	      </form>
      </center>
 	 <!-- 删除学生信息 -->
      <center>
-	     <form action="del_student" method="post">
+	     <form action="admin_delete_student" method="post">
 	      	待删学生学号：<input type="text" style="text-indent:6px" name="stuNum"/>
    			<input class="button" type="submit" value="提交"/>
 	     </form>

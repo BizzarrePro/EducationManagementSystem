@@ -9,30 +9,30 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
   <title>home page</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="css/homestyle.css">
-  <link href="css/home.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../css/homestyle.css">
+  <link href="../css/home.css" type="text/css" rel="stylesheet" />
 </head>
 </head>
 <body>
   <div id="container">
     <div id="head">
-      <img  class="title" src="images/title.png" style="margin-top:10px">
+      <img  class="title" src="../images/title.png" style="margin-top:10px">
     </div>
     <!--新闻展示栏-->
     <div id="banner">
       <div id="slideshow" rel="auto-play">
         <div class="img"> 
           <span>
-          <a href="#" target="_blank"><img src="images/lan2.jpg" alt="1" /></a>
-          <a href="#" target="_blank"><img src="images/lan1.jpg" alt="2" /></a>
-          <a href="#" target="_blank"><img src="images/lan3.jpg" alt="3" /></a>
+          <a href="#" target="_blank"><img src="../images/lan2.jpg" alt="1" /></a>
+          <a href="#" target="_blank"><img src="../images/lan1.jpg" alt="2" /></a>
+          <a href="#" target="_blank"><img src="../images/lan3.jpg" alt="3" /></a>
           </span>
           <div class="paging pattern"></div>
           <div class="paging subpattern"></div>
         </div>
       </div>
-      <script src="js/jquery-1.7.2.min.js"></script>
-      <script src="js/jquery.slider.js"></script>
+      <script src="../js/jquery-1.7.2.min.js"></script>
+      <script src="../js/jquery.slider.js"></script>
     </div>
 
   

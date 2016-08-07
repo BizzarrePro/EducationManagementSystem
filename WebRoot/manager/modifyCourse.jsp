@@ -59,37 +59,32 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </script>
     <!-- 代码部分end -->
     </div>
-
-
-    <div id="content">
-      <center>
-    <s:form action="ModifyCourse1" method="post" theme="simple">
-      <s:hidden name="course.id"></s:hidden>
-      <p>
-        课程号：
-        <s:textfield name="course.cid"></s:textfield>
-      <p>
-        课程名：
-        <s:textfield name="course.cname"></s:textfield>
-      <p>
-        开课学期：
-        <s:textfield name="course.kkxq"></s:textfield>
-      <p>
-        课程学时：
-        <s:textfield name="course.xs"></s:textfield>
-      <p>
-        课程学分：
-        <s:textfield name="course.xf"></s:textfield>
-      <p>
-        <s:submit value="确定"></s:submit>
-        <s:reset value="重改"></s:reset>
-    </s:form>
-    <s:fielderror></s:fielderror>
-   <a href="ViewCourses.action">查看课程信息</a>
-  </center>
-    </div>
-
-
+    <div>
+		<center>
+     	删除课程
+     	</br>
+   		<form action="admin_delete_course" method="post">
+	      		课程名：<input type="text" style="text-indent:6px" name="courName"/>
+  				<input class="button" type="submit" value="删除"/>
+   				<input type="reset" value="重置"/>
+   				</br>
+	    </form>
+  	 </center>
+  	 <center>
+     	修改课程
+     	</br>
+   		<form action="admin_delete_course" method="post">
+	      		课程号：<input type="text" style="text-indent:6px" name="courNum"/>
+	      		限制人数：	<input type="text" style="text-indent:6px" name="courLimitedNum"/>
+	      		学分：<input type="text" style="text-indent:6px" name="courCredits"/>
+	      		必修/选修：	<input type="text" style="text-indent:6px" name="courType"/>
+	      		已选人数：	<input type="text" style="text-indent:6px" name="choosedNum"/>
+  				<input class="button" type="submit" value="删除"/>
+   				<input type="reset" value="重置"/>
+   				</br>
+	    </form>
+  	 </center>
+	</div>
     <div id="foot">
       </br>
       </br>

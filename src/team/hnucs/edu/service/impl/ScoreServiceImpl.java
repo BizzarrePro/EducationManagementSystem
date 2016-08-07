@@ -1,6 +1,8 @@
 package team.hnucs.edu.service.impl;
 
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 
@@ -8,6 +10,7 @@ import team.hnucs.edu.dao.CourseDAO;
 import team.hnucs.edu.dao.ScoreDAO;
 import team.hnucs.edu.dao.StudentDAO;
 import team.hnucs.edu.entity.Course;
+import team.hnucs.edu.entity.CourseSelection;
 import team.hnucs.edu.entity.Score;
 import team.hnucs.edu.entity.ScoreId;
 import team.hnucs.edu.entity.Student;
@@ -50,11 +53,35 @@ public class ScoreServiceImpl implements ScoreService{
 	}
 
 	@Override
-	public void delete(String courNum, String stuNum) {
+	public void delete(String courName, String stuNum) {
 		// TODO Auto-generated method stub
-		Course cour = courseDAO.queryById(courNum);
 		Student stu = studentDAO.queryById(stuNum);
-		scoreDAO.delete(cour, stu);
+		Set<CourseSelection> cs = stu.getCourseSelections();
+		Iterator<CourseSelection> iter = cs.iterator();
+		Course cour = null;
+		while(iter.hasNext()){
+			cour = iter.next().getCourse();
+			if(cour.getCourName().equals(courName)){
+				scoreDAO.delete(cour, stu);
+				break;
+			}
+		}
+	}
+
+	@Override
+	public void updateScore(String stuNum, String courName, Byte score) {
+		// TODO Auto-generated method stub
+		Student stu = studentDAO.queryById(stuNum);
+		Set<CourseSelection> cs = stu.getCourseSelections();
+		Iterator<CourseSelection> iter = cs.iterator();
+		Course cour = null;
+		while(iter.hasNext()){
+			cour = iter.next().getCourse();
+			if(cour.getCourName().equals(courName)){
+				scoreDAO.updateScore(stu, cour, score);
+				break;
+			}
+		}
 	}
 
 }

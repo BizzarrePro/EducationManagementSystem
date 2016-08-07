@@ -82,5 +82,4 @@ public class AdminManageStudentAction extends ActionSupport implements RequestAw
 		return "findAll";
 	}
 	
-
 }

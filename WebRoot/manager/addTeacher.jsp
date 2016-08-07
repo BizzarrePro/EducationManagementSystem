@@ -60,28 +60,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </script>
     <!-- 代码部分end -->
     </div>
-
-
-    <div id="content">
-    <center>
-
-    <s:form action="AddTeacher" method="post" theme="simple">
-      <p>
-        教师职工号：
-        <s:textfield name="teacher.tid"></s:textfield>
-      <p>
-        教师姓名：
-        <s:textfield name="teacher.tname"></s:textfield>
-      <p>
-        <s:submit value="确定"></s:submit>
-        <s:reset value="重置"></s:reset>
-    </s:form>
-  </center>
-  <s:fielderror></s:fielderror>
-    </div>
+	<div>
 		<!-- 添加老师 -->
      	 <center>
-	      <form action="save_teacher" method="post">
+	      <form action="admin_save_teacher" method="post">
 	      		工号：<input type="text" style="text-indent:6px" name="teaNum"/>
    				姓名：<input type="text"  style="text-indent:6px" name="teaName"/>
    				性别	<input type="text"  style="text-indent:6px" name="teaSex"/></br>
@@ -98,6 +80,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    				<input type="reset" value="重置"/>
 	      </form>
      	 </center>
+     	 </div>
 
     <div id="foot">
       </br>

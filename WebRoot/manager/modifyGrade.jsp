@@ -63,33 +63,27 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
     <div id="content">
      <center>
-    <s:form action="ModifyGrade" method="post" theme="simple">
-      <s:hidden name="grade.id"></s:hidden>
-      <p>
-        学号：
-        <s:textfield name="grade.sid"></s:textfield>
-      <p>
-        学生姓名：
-        <s:textfield name="grade.sname"></s:textfield>
-      <p>
-        课程号：
-        <s:textfield name="grade.cid"></s:textfield>
-      <p>
-        课程名：
-        <s:textfield name="grade.cname"></s:textfield>
-      <p>
-        教师姓名：
-        <s:textfield name="grade.tname"></s:textfield>
-      <p>
-        成绩：
-        <s:textfield name="grade.total"></s:textfield>
-      <p>
-        <s:submit value="确定"></s:submit>
-        <s:reset value="重改"></s:reset>
-    </s:form>
-    <s:fielderror></s:fielderror>
- <a href="ViewGrade.action">查看成绩信息</a>
-  </center>
+     	删除成绩
+     	</br>
+   		<form action="admin_delete_grade" method="post">
+	      		学号：<input type="text" style="text-indent:6px" name="stuNum"/>
+	      		课程名：<input type="text" style="text-indent:6px" name="courName"/>
+  					<input class="button" type="submit" value="删除"/>
+   					<input type="reset" value="重置"/>
+   					</br>
+	    </form>
+  	 </center>
+  	 <center>
+     	修改成绩
+     	</br>
+   		<form action="admin_update_grade" method="post">
+	      		学号：<input type="text" style="text-indent:6px" name="stuNum"/>
+	      		课程名：<input type="text" style="text-indent:6px" name="courName"/>
+	      		成绩：<input type="text" style="text-indent:6px" name="score"/>
+  					<input class="button" type="submit" value="更改"/>
+   					<input type="reset" value="重置"/>
+	    </form>
+  	 </center>
     </div>
 
 

@@ -12,4 +12,5 @@ public interface ScoreDAO {
 	abstract void delete(Course cour, Student stu);
 	abstract List<Score> findById(Student stu);
 	abstract List<Score> findAllbyCourse(Course cour);
+	abstract void updateScore(Student stu, Course cour, Byte score);
 }

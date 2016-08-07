@@ -12,4 +12,5 @@ public interface CourseDAO {
 	abstract Course queryById(String courNum);
 	abstract List<Course> findRemainingCourse();
 	abstract Course findByTeaAndCour(String teaNum, String courseName);
+	abstract void updateCourse(Course cour);
 }

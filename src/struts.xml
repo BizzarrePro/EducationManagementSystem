@@ -5,35 +5,45 @@
 <struts>
 	<constant name="struts.devMode" value="true"/>
 	<package name="default" extends="struts-default">
+		<!-- manager -->
 		<action name="user" class="team.hnucs.edu.action.LoginAction" method="login">
-			<result name="student">/homepage_student.jsp</result>
-			<result name="teacher">/homepage_teacher.jsp</result>
-			<result name="administrator">/homepage_manager.jsp</result>
+			<result name="student">/student/homepage_student.jsp</result>
+			<result name="teacher">/teacher/homepage_teacher.jsp</result>
+			<result name="administrator">/manager/homepage_manager.jsp</result>
 			<result name="loginError">/Error.jsp</result>
 		</action>
-		<action name="save_student" class="AdminManageStudentAction" method="save">
-			<result name="save">/addStudentSuccess.jsp</result>
+		<action name="admin_save_student" class="AdminManageStudentAction" method="save">
+			<result name="save">/manager/addStudentSuccess.jsp</result>
 		</action>
-		<action name="save_teacher" class="AdminManageTeacherAction" method="save">
-			<result name="save">/addTeacherSuccess.jsp</result>
+		<action name="admin_save_teacher" class="AdminManageTeacherAction" method="save">
+			<result name="save">/manager/addTeacherSuccess.jsp</result>
 		</action>
-		<action name="update_teacher" class="AdminManageTeacherAction" method="update">
-			<result name="update">/modifyTeacherSuccess.jsp</result>
+		<action name="admin_save_course" class="AdminManageCourseAction" method="save">
+			<result name="save">/manager/addCourseSuccess.jsp</result>
 		</action>
-		<action name="save_course" class="AdminManageCourseAction" method="save">
-			<result name="save">/addCourseSuccess.jsp</result>
+		<action name="admin_delete_course" class="AdminManageCourseAction" method="delete">
+			<result name="delete">/manager/deleteCourseSuccess.jsp</result>
 		</action>
-		<action name="del_course" class="AdminManageCourseAction" method="delete">
-			<result name="delete">/deleteCourseSuccess.jsp</result>
+		<action name="admin_del_student" class="AdminManageStudentAction" method="delete">
+			<result name="delete">/manager/deleteStudentSuccess.jsp</result>
 		</action>
-		<action name="del_student" class="AdminManageStudentAction" method="delete">
-			<result name="delete">/deleteStudentSuccess.jsp</result>
+		<action name="admin_delete_score" class="AdminManageScoreAction" method="delete">
+			<result name="delete">/manager/deleteScoreSuccess.jsp</result>
 		</action>
-		<action name="findall_student" class="AdminManageStudentAction" method="findAll">
-			<result name="findAll">/viewStudent.jsp</result>
+		<action name="admin_update_teacher" class="AdminManageTeacherAction" method="update">
+			<result name="update">/manager/modifyTeacherSuccess.jsp</result>
 		</action>
+		<action name="admin_findall_student" class="AdminManageStudentAction" method="findAll">
+			<result name="findAll">/manager/viewStudent.jsp</result>
+		</action>
+		<action name="admin_save_score" class="AdminManageScoreAction" method="save">
+			<result name="save">/manager/addGrade.jsp</result>
+			<result name="error">/addGradeFail.jsp</result>
+		</action>
+		
+		<!-- teacher -->
 		<action name="save_score" class="TeacherManageStudentAction" method="saveScore">
-			<result name="save">/addGrade.jsp</result>
+			<result name="save">/teacher/addGrade.jsp</result>
 			<result name="error">/addGradeFail.jsp</result>
 		</action>
 	</package>

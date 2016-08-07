@@ -51,9 +51,20 @@ public class AdminManageCourseAction extends ActionSupport implements ModelDrive
 	}
 	public String delete(){
 		HttpServletRequest request = ServletActionContext.getRequest();
-		String courseNum = request.getParameter("courseNum");
+		String courseNum = request.getParameter("courNum");
 		courseService.delete(courseNum);
 		return "delete";
+	}
+	public String update(){
+		HttpServletRequest request = ServletActionContext.getRequest();
+		String courNum = request.getParameter("courNum");
+		String courLimitedNum = request.getParameter("courLimitedNum");
+		String courCredits = request.getParameter("courCredits");
+		String courType = request.getParameter("courType");
+		//—°–ﬁ±ÿ–ﬁ–Ë≈–∂œ
+		String choosedNum = request.getParameter("choosedNum");
+		
+		return "update";
 	}
 
 
