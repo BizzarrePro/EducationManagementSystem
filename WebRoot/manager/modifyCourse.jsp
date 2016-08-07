@@ -77,7 +77,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	      		课程号：<input type="text" style="text-indent:6px" name="courNum"/>
 	      		限制人数：	<input type="text" style="text-indent:6px" name="courLimitedNum"/>
 	      		学分：<input type="text" style="text-indent:6px" name="courCredits"/>
-	      		必修/选修：	<input type="text" style="text-indent:6px" name="courType"/>
+	      		课程类型：
+   				<label><input type="radio" name="courType" value="必修" checked="checked" >必修</label>
+   				<label><input type="radio" name="courType" value="选修" >选修</label>
 	      		已选人数：	<input type="text" style="text-indent:6px" name="choosedNum"/>
   				<input class="button" type="submit" value="删除"/>
    				<input type="reset" value="重置"/>

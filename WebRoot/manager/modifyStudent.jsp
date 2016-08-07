@@ -62,7 +62,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
     <div id="content">
-      <!-- 修改学生信息 -->
+      	修改学生信息
      	 <center>
 	      <form action="save_student" method="post">
 	      		学号：<input type="text" style="text-indent:6px" name="stuNum"/>
@@ -84,6 +84,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    				<input type="reset" value="重置"/>
 	      </form>
      	 </center>
+     	 <center>
+     	删除学生信息
+     	</br>
+   		<form action="admin_delete_student" method="post">
+	      		课程名：<input type="text" style="text-indent:6px" name="stuNum"/>
+  				<input class="button" type="submit" value="删除"/>
+   				<input type="reset" value="重置"/>
+   				</br>
+	    </form>
+  	 </center>
     </div>
 
 	

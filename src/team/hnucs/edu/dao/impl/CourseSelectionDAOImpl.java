@@ -8,6 +8,7 @@ import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 
 import team.hnucs.edu.dao.CourseDAO;
 import team.hnucs.edu.dao.CourseSelectionDAO;
+import team.hnucs.edu.entity.Teacher;
 import team.hnucs.edu.entity.Course;
 import team.hnucs.edu.entity.CourseSelection;
 import team.hnucs.edu.entity.Student;
@@ -31,12 +32,12 @@ public class CourseSelectionDAOImpl extends HibernateDaoSupport implements Cours
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<Course> findById(Student stu) {
+	public List<CourseSelection> findByStudent(Student stu) {
 		// TODO Auto-generated method stub
 		log.debug("query course which was selected by this student");
 		try{
 			String hql = "FROM CourseSelection cs WHERE cs.student = " + stu;
-			List<Course> list = (List<Course>)super.getHibernateTemplate().find(hql);
+			List<CourseSelection> list = (List<CourseSelection>)super.getHibernateTemplate().find(hql);
 			return list;
 		} catch (RuntimeException e){
 			log.error("get course list failed", e);
@@ -64,6 +65,21 @@ public class CourseSelectionDAOImpl extends HibernateDaoSupport implements Cours
 			super.getHibernateTemplate().delete(cs);
 		} catch (RuntimeException e){
 			log.error("delete failed", e);
+			throw e;
+		}
+	}
+
+	@Override
+	public List<CourseSelection> findByTeacher(Teacher tea) {
+		// TODO Auto-generated method stub
+		log.debug("query course");
+		try{
+			String hql = "FROM CourseSelection cs WHERE cs.teacher = " + tea;
+			@SuppressWarnings("unchecked")
+			List<CourseSelection> list = (List<CourseSelection>)super.getHibernateTemplate().find(hql);
+			return list;
+		} catch (RuntimeException e){
+			log.error("get course list failed", e);
 			throw e;
 		}
 	}

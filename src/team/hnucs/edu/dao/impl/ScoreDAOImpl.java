@@ -89,4 +89,18 @@ public class ScoreDAOImpl extends HibernateDaoSupport implements ScoreDAO{
 		}
 	}
 
+	@Override
+	public Score findByStuAndCour(Student stu, Course cour) {
+		// TODO Auto-generated method stub
+		log.debug("find student score");
+		try{
+			String hql = "FROM Score sco WHERE sco.student = "+stu+" AND sco.course = "+cour;
+			Score sc = (Score) this.getHibernateTemplate().find(hql);
+			return sc;
+		} catch (RuntimeException e){
+			log.error("update failed", e);
+			throw e;
+		}
+	}
+
 }

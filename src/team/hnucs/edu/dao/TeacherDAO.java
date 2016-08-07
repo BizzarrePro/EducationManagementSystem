@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Set;
 
 import team.hnucs.edu.entity.Course;
+import team.hnucs.edu.entity.Score;
 import team.hnucs.edu.entity.Student;
 import team.hnucs.edu.entity.Teacher;
 
@@ -14,4 +15,6 @@ public interface TeacherDAO {
 	abstract List<Student> queryStuOfCourse(String teaNum, String course);
 	abstract void updateInfo(Teacher tea);
 	abstract Teacher queryById(String teaNum);
+	abstract List<Teacher> queryAll();
+	abstract void delete(Teacher tea);
 }

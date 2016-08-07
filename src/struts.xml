@@ -24,14 +24,20 @@
 		<action name="admin_delete_course" class="AdminManageCourseAction" method="delete">
 			<result name="delete">/manager/deleteCourseSuccess.jsp</result>
 		</action>
-		<action name="admin_del_student" class="AdminManageStudentAction" method="delete">
+		<action name="admin_delete_student" class="AdminManageStudentAction" method="delete">
 			<result name="delete">/manager/deleteStudentSuccess.jsp</result>
+		</action>
+		<action name="admin_delete_teacher" class="AdminManageTeacherAction" method="delete">
+			<result name="delete">/manager/deleteTeacherSuccess.jsp</result>
 		</action>
 		<action name="admin_delete_score" class="AdminManageScoreAction" method="delete">
 			<result name="delete">/manager/deleteScoreSuccess.jsp</result>
 		</action>
 		<action name="admin_update_teacher" class="AdminManageTeacherAction" method="update">
 			<result name="update">/manager/modifyTeacherSuccess.jsp</result>
+		</action>
+		<action name="admin_update_course" class="AdminManageCourseAction" method="update">
+			<result name="update">/manager/modifyCourseSuccess.jsp</result>
 		</action>
 		<action name="admin_findall_student" class="AdminManageStudentAction" method="findAll">
 			<result name="findAll">/manager/viewStudent.jsp</result>

@@ -44,4 +44,16 @@ public class CourseServiceImpl implements CourseService{
 		return courseDAO.findByTeaAndCour(teaNum, courName);
 	}
 
+	@Override
+	public Course findById(String courNum) {
+		// TODO Auto-generated method stub
+		return courseDAO.queryById(courNum);
+	}
+
+	@Override
+	public void updateCourse(Course cour) {
+		// TODO Auto-generated method stub
+		courseDAO.updateCourse(cour);
+	}
+
 }

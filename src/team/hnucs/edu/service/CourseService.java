@@ -10,4 +10,6 @@ public interface CourseService {
 	abstract List<Course> findByName(String courName);
 	abstract Course findByTeaAndCour(String teaNum, String courName);
 	abstract List<Course> findRemainingCourse();
+	abstract Course findById(String courNum);
+	abstract void updateCourse(Course cour);
 }

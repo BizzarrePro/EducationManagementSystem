@@ -10,6 +10,7 @@ import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 
 import team.hnucs.edu.dao.TeacherDAO;
 import team.hnucs.edu.entity.Course;
+import team.hnucs.edu.entity.Score;
 import team.hnucs.edu.entity.Student;
 import team.hnucs.edu.entity.Teacher;
 
@@ -91,7 +92,34 @@ public class TeacherDAOImpl extends HibernateDaoSupport implements TeacherDAO{
 		try{
 			this.getHibernateTemplate().save(tea);
 		} catch(DataAccessException e) {
-			log.error("sace failed");
+			log.error("save failed");
+			throw e;
+		}
+	}
+
+	@Override
+	public void delete(Teacher tea) {
+		// TODO Auto-generated method stub
+		log.debug("delete teacher info");
+		try{
+			this.getHibernateTemplate().delete(tea);
+		} catch(DataAccessException e) {
+			log.error("delete failed");
+			throw e;
+		}
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Teacher> queryAll() {
+		// TODO Auto-generated method stub
+		log.debug("query all teacher info");
+		try{
+			String hql = "FROM Teacher";
+			List<Teacher> list = (List<Teacher>) this.getHibernateTemplate().find(hql);
+			return list;
+		} catch(DataAccessException e) {
+			log.error("query all failed");
 			throw e;
 		}
 	}

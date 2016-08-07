@@ -42,10 +42,10 @@ public class CourseSelectionServiceImpl implements CourseSelectionService{
 		return courSelDao.findByCourse(cour);
 	}
 	@Override
-	public List<Course> findById(String stuNum) {
+	public List<CourseSelection> findByStudent(String stuNum) {
 		// TODO Auto-generated method stub
 		Student stu = studentDao.queryById(stuNum);
-		return courSelDao.findById(stu);
+		return courSelDao.findByStudent(stu);
 	}
 
 	@Override
@@ -66,6 +66,13 @@ public class CourseSelectionServiceImpl implements CourseSelectionService{
 		Teacher tea = teacherDao.queryById(teaNum);
 		CourseSelection cs = new CourseSelection(new CourseSelectionId(stu, cour, tea),  stu, cour, tea);
 		courSelDao.delete(cs);
+	}
+
+	@Override
+	public List<CourseSelection> findByTeacher(String teaNum) {
+		// TODO Auto-generated method stub
+		Teacher tea = teacherDao.queryById(teaNum);
+		return courSelDao.findByTeacher(tea);
 	}
 
 }

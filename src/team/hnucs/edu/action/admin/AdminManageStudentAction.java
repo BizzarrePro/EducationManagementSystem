@@ -76,6 +76,13 @@ public class AdminManageStudentAction extends ActionSupport implements RequestAw
 		stuService.delete(studentNum);
 		return "delete";
 	}
+	//
+	public String findById(){
+		HttpServletRequest request = ServletActionContext.getRequest();
+		String stuNum = request.getParameter("stuNum");
+		stuService.queryById(stuNum);
+		return "findById";
+	}
 	public String findAll(){
 		List<Student> list = stuService.queryAll();
 		req.put("studentList", list);

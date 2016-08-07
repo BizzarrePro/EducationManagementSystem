@@ -1,8 +1,12 @@
 package team.hnucs.edu.action.admin;
 
+import java.util.List;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.struts2.ServletActionContext;
+import org.apache.struts2.interceptor.RequestAware;
 
 import team.hnucs.edu.entity.Course;
 import team.hnucs.edu.entity.Score;
@@ -15,7 +19,7 @@ import team.hnucs.edu.service.StudentService;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class AdminManageScoreAction extends ActionSupport {
+public class AdminManageScoreAction extends ActionSupport implements RequestAware{
 	/**
 	 * 
 	 */
@@ -23,9 +27,20 @@ public class AdminManageScoreAction extends ActionSupport {
 	private ScoreService scoreService;
 	private StudentService studentService;
 	private CourseService courseService;
-
+	private Map<String, Object> req;
+	public void setStudentService(StudentService studentService) {
+		this.studentService = studentService;
+	}
+	public void setCourseService(CourseService courseService) {
+		this.courseService = courseService;
+	}
 	public void setScoreService(ScoreService scoreService) {
 		this.scoreService = scoreService;
+	}
+	@Override
+	public void setRequest(Map<String, Object> arg0) {
+		// TODO Auto-generated method stub
+		req = arg0;
 	}
 	public String save(){
 		HttpServletRequest request = ServletActionContext.getRequest();
@@ -57,4 +72,21 @@ public class AdminManageScoreAction extends ActionSupport {
 		scoreService.updateScore(stuNum, courName, score);
 		return "update";
 	}
+	//
+	public String findById(){
+		HttpServletRequest request = ServletActionContext.getRequest();
+		String stuNum = request.getParameter("stuNum");
+		List<Score> scList = scoreService.findById(stuNum);
+		req.put("scoreList", scList);
+		return "findById";
+	}
+	//
+	public String findAll(){
+		HttpServletRequest request = ServletActionContext.getRequest();
+		String courName = request.getParameter("courName");
+		List<Score> scList = scoreService.findAllbyCourse(courName);
+		req.put("scoreList", scList);
+		return "findAll";
+	}
+
 }
