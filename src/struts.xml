@@ -32,5 +32,9 @@
 		<action name="findall_student" class="AdminManageStudentAction" method="findAll">
 			<result name="findAll">/viewStudent.jsp</result>
 		</action>
+		<action name="save_score" class="TeacherManageStudentAction" method="saveScore">
+			<result name="save">/addGrade.jsp</result>
+			<result name="error">/addGradeFail.jsp</result>
+		</action>
 	</package>
 </struts>

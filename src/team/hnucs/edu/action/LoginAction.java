@@ -65,15 +65,19 @@ public class LoginAction extends ActionSupport implements SessionAware{
 		}
 		else if(type.equals("老师")){
 			Teacher tea = teacherService.checkLogIn(username, password);
-			if(tea != null)
+			if(tea != null){
+				session.put("username", username);
 				return "teacher";
+			}
 			else
 				return "loginError";
 		}
 		else if(type.equals("管理员")){
 			Teacher admin = teacherService.checkLogIn(username, password);
-			if(admin.getType())
+			if(admin.getType()){
+				session.put("username", username);
 				return "admin";
+			}
 			else
 				return "loginError";
 		}

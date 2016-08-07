@@ -8,5 +8,6 @@ public interface CourseService {
 	abstract void save(Course cour);
 	abstract void delete(String courNum);
 	abstract List<Course> findByName(String courName);
+	abstract Course findByTeaAndCour(String teaNum, String courName);
 	abstract List<Course> findRemainingCourse();
 }

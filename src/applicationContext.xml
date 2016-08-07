@@ -89,6 +89,17 @@
 			<ref bean="teacherService" />
 		</property>
 	</bean>
+	<bean id="TeacherManageStudentAction" class="team.hnucs.edu.action.teacher.TeacherManageStudentAction">
+		<property name="courseService">
+			<ref bean="courseService" />
+		</property>
+		<property name="scoreService">
+			<ref bean="scoreService" />
+		</property>
+		<property name="studentService">
+			<ref bean="studentService" />
+		</property>
+	</bean>
 	<bean id="studentService" class="team.hnucs.edu.service.impl.StudentServiceImpl">
 		<property name="studentDAO">
 			<ref bean="studentDAO" />

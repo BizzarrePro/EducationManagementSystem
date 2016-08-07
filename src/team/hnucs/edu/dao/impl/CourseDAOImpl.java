@@ -79,4 +79,17 @@ public class CourseDAOImpl extends HibernateDaoSupport implements CourseDAO {
 		}
 	}
 
+	@Override
+	public Course findByTeaAndCour(String teaNum, String courseName) {
+		// TODO Auto-generated method stu
+		log.debug("query by course name and teacher number");
+		try{
+			String hql = "FROM Course cour WHERE cour.teacher = '" + teaNum + "' AND cour.courName = '"+courseName+"'";
+			return (Course)super.getHibernateTemplate().find(hql);
+		} catch (RuntimeException e){
+			log.error("find failed", e);
+			throw e;
+		}
+	}
+
 }

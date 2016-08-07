@@ -1,38 +1,38 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
+
 <!DOCTYPE html PUBLIC html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>home page</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="css/homestyle.css">
-  <link href="css/home.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../homestyle.css">
+  <link href="../css/home.css" type="text/css" rel="stylesheet" />
 </head>
 </head>
 <body>
   <div id="container">
     <div id="head">
-      <img  class="title" src="images/title.png" style="margin-top:10px">
+      <img  class="title" src="../images/title.png" style="margin-top:10px">
     </div>
     <!--新闻展示栏-->
     <div id="banner">
       <div id="slideshow" rel="auto-play">
         <div class="img"> 
           <span>
-          <a href="menu_student.jsp" target="_self"><img src="images/lan1.jpg" alt="1" /></a>
-          <a href="menu_student.jsp" target="_self"><img src="images/lan2.jpg" alt="2" /></a>
-          <a href="menu_student.jsp" target="_self"><img src="images/lan3.jpg" alt="3" /></a>
+          <a href="#" target="_blank"><img src="../images/lan1.jpg" alt="1" /></a>
+          <a href="#" target="_blank"><img src="../images/lan2.jpg" alt="2" /></a>
+          <a href="#" target="_blank"><img src="../images/lan3.jpg" alt="3" /></a>
           </span>
           <div class="paging pattern"></div>
           <div class="paging subpattern"></div>
         </div>
       </div>
-      <script src="js/jquery-1.7.2.min.js"></script>
-      <script src="js/jquery.slider.js"></script>
+      <script src="../js/jquery-1.7.2.min.js"></script>
+      <script src="../js/jquery.slider.js"></script>
     </div>
 
   
@@ -43,7 +43,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <div class="index-con" style="z-index: 0">
         <ul>
           <li class="in-kct in-course"> 
-            <a href="menu_student.jsp" title="个人信息" target="_self">
+            <a href="#" title="个人信息">
                 <div class="in-block"> 
                 <i class="bigger"></i> 
                 <span class="ch show" style="display: block;">个人信息</span> 
@@ -53,17 +53,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </a>
            </li>
           <li class="in-kct in-quest">
-          <a href="menu_student.jsp" title="选课" target="_self">
+          <a href="#" title="课程信息">
               <div class="in-block"> 
               <i class=""></i> 
-              <span class="ch" style="display: inline;">选课</span>
+              <span class="ch" style="display: inline;">课程信息</span>
               <i class="in-none"></i> 
               <span class="in-text" style="display: none; width: 280px; left: 30px"></span> 
               </div>
            </a> 
            </li>
           <li class="in-jbk in-plan"> 
-          <a href="menu_student.jsp" title="成绩查询" target="_self">
+          <a href="#" title="成绩查询">
             <div class="in-block"> 
               <i style="display: block;"></i> 
               <span style="display: inline;">成绩查询</span>
@@ -73,10 +73,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
            </a> 
            </li>
           <li class="in-jbk in-report"> 
-          <a href="menu_student.jsp" title="选课结果" target="_self">
+          <a href="#" title="录入成绩">
             <div class="in-block"> 
             <i style="display: block;"></i> 
-            <span style="display: inline;">选课结果</span>
+            <span style="display: inline;">录入成绩</span>
             <i class="in-none toLeft2" style="display: none;"></i> 
             <span class="in-text" style="display: none;"></span> 
             </div>
@@ -84,7 +84,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
            </li>
 
           <li class="in-zxl in-forma"> 
-          <a href="menu_student.jsp" title="修改信息" target="_self">
+          <a href="#" title="修改信息">
             <div class="in-block"> 
             <i style="display: block;"></i> 
             <span style="display: inline;">修改信息</span> 
@@ -95,7 +95,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
            </li>
 
           <li class="in-zxl in-means"> 
-          <a href="menu_student.jsp" title="修改密码" target="_self">
+          <a href="#" title="修改密码">
             <div class="in-block"> <i></i> 
             <span>修改密码</span> 
             <i class="in-none"></i> 
@@ -104,8 +104,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
            </a> 
            </li>
 
-          <li class="in-jbk in-client"> <a href="menu_student.jsp" target="_self" title="查看作业">
-            <div class="in-block"> <i></i> <span>查看作业</span> <i class="in-none"></i> <span class="in-text">
+          <li class="in-jbk in-client"> <a href="#" target="_blank" title="查看学生信息">
+            <div class="in-block"> <i></i> <span>查看学生信息</span> <i class="in-none"></i> <span class="in-text">
               
               </span> </div>
             </a> </li>
