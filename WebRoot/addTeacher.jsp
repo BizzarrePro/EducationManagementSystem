@@ -79,7 +79,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </center>
   <s:fielderror></s:fielderror>
     </div>
-
+		<!-- 添加老师 -->
+     	 <center>
+	      <form action="save_teacher" method="post">
+	      		工号：<input type="text" style="text-indent:6px" name="teaNum"/>
+   				姓名：<input type="text"  style="text-indent:6px" name="teaName"/>
+   				性别	<input type="text"  style="text-indent:6px" name="teaSex"/></br>
+   				年龄：<input type="text"  style="text-indent:6px" name="teaAge"/>
+   				生日	<input type="text" name="teaBir" placeholder="yyyy-MM-dd"/><br>
+   				民族：<input type="text"  style="text-indent:6px" name="teaMinority"/>
+   				学位：<input type="text"  style="text-indent:6px" name="teaDegree"/>
+   				职称：<input type="text"  style="text-indent:6px" name="teaProTitle"/>
+   				联系方式：<input type="text"  style="text-indent:6px" name="teaContactWay"/></br>
+   				密码：<input type="text"  style="text-indent:6px" name="teaPassword"/></br>
+   				<label><input type="radio" name="userType" value="管理员" checked="checked" >管理员</label>
+   				<label><input type="radio" name="userType" value="教师" >教师</label>
+   				<input class="button" type="submit" value="提交"/>
+   				<input type="reset" value="重置"/>
+	      </form>
+     	 </center>
 
     <div id="foot">
       </br>

@@ -12,7 +12,7 @@ public class ScoreId implements java.io.Serializable {
 
 	private Student student;
 	private Course course;
-	private Boolean semester;
+	private Byte semester;
 	private Byte score;
 
 	// Constructors
@@ -22,14 +22,14 @@ public class ScoreId implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public ScoreId(Student student, Course course, Boolean semester) {
+	public ScoreId(Student student, Course course, Byte semester) {
 		this.student = student;
 		this.course = course;
 		this.semester = semester;
 	}
 
 	/** full constructor */
-	public ScoreId(Student student, Course course, Boolean semester, Byte score) {
+	public ScoreId(Student student, Course course, Byte semester, Byte score) {
 		this.student = student;
 		this.course = course;
 		this.semester = semester;
@@ -54,11 +54,11 @@ public class ScoreId implements java.io.Serializable {
 		this.course = course;
 	}
 
-	public Boolean getSemester() {
+	public Byte getSemester() {
 		return this.semester;
 	}
 
-	public void setSemester(Boolean semester) {
+	public void setSemester(Byte semester) {
 		this.semester = semester;
 	}
 

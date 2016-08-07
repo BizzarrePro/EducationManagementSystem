@@ -13,9 +13,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <link rel="stylesheet" type="text/css" href="css/table.css">
   <link href="css/style.css" type="text/css" rel="stylesheet" />
   <script type="text/javascript" src="js/nav.js"></script>
-    <link href="css/nav.css" type="text/css" rel="stylesheet" />
-  
-    </style>
+  <link href="css/nav.css" type="text/css" rel="stylesheet" />
   <script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.js">
   </script>
 </head>
@@ -93,11 +91,11 @@ $(document).ready(function(){
       
       
       <div class="left">
-        <a href="http://kczx.hnu.cn/" class="t a"><img src="images/课程中心.jpg"> </a>
+        <a href="http://kczx.hnu.cn/" class="t a"><img src="images/p1.jpg"> </a>
         <label>课程中心</label><br/><br/>
-        <a href="http://hdjw1.hnu.cn/" class="t b"><img src="images/教务系统.jpg"></a>
+        <a href="http://hdjw1.hnu.cn/" class="t b"><img src="images/p2.jpg"></a>
         <label>教务系统</label><br/><br/>
-        <a href="http://lib.hnu.cn/" class="t c"><img src="images/图书馆.jpg"></a>
+        <a href="http://lib.hnu.cn/" class="t c"><img src="images/p3.jpg"></a>
         <label>图书馆</label><br/><br/>
       </div>
       

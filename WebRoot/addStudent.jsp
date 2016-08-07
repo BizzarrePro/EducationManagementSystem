@@ -63,23 +63,27 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
     <div id="content">
-    <center>
-		<s:form action="AddStudent" method="post" theme="simple">
-			<p>
-				学号
-				<s:textfield name="student.sid"></s:textfield>
-			<p>
-				姓名
-				<s:textfield name="student.sname"></s:textfield>
-			<p>
-				专业
-				<s:textfield name="student.subject"></s:textfield>
-			<p>
-				<s:submit value="确定"></s:submit>
-				<s:reset value="重填"></s:reset>
-		</s:form>
-		<s:fielderror></s:fielderror>
-	</center>
+   		<center>
+	      <form action="save_student" method="post">
+	      		学号：<input type="text" style="text-indent:6px" name="stuNum"/>
+   				姓名：<input type="text"  style="text-indent:6px" name="stuName"/>
+   				性别	<input type="text"  style="text-indent:6px" name="stuSex"/></br>
+   				年龄：<input type="text"  style="text-indent:6px" name="stuAge"/>
+   				生日	<input type="text" name="stuBir" placeholder="yyyy-MM-dd"/><br>
+   				民族：<input type="text"  style="text-indent:6px" name="stuMinority"/>
+   				籍贯：<input type="text"  style="text-indent:6px" name="stuRoot"/></br>
+   				学院：<input type="text"  style="text-indent:6px" name="stuAcademy"/>
+   				专业：<input type="text"  style="text-indent:6px" name="stuMajor"/>
+   				班级：<input type="text"  style="text-indent:6px" name="stuClass"/>
+   				政治面貌：<input type="text"  style="text-indent:6px" name="stuPoliticalStatus"/></br>
+   				入学时间：<input type="text" name="stuEnrollment" placeholder="yyyy-MM-dd"/><br>
+   				联系方式：<input type="text"  style="text-indent:6px" name="stuContactWay"/></br>
+   				学期：<input type="text"  style="text-indent:6px" name="semester"/>
+   				密码：<input type="text"  style="text-indent:6px" name="password"/></br>
+   				<input class="button" type="submit" value="提交"/>
+   				<input type="reset" value="重置"/>
+	      </form>
+     	 </center>
     </div>
 
 

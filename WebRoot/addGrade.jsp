@@ -64,31 +64,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
     <div id="content">
     <center>
-		<s:form action="AddGrade" method="post" theme="simple">
-			<p>
-				学号：
-				<s:textfield name="grade.sid"></s:textfield>
-			<p>
-				学生姓名：
-				<s:textfield name="grade.sname"></s:textfield>
-			<p>
-				课程号：
-				<s:textfield name="grade.cid"></s:textfield>
-			<p>
-				课程名：
-				<s:textfield name="grade.cname"></s:textfield>
-			<p>
-				教师姓名：
-				<s:textfield name="grade.tname"></s:textfield>
-			<p>
-				成绩：
-				<s:textfield name="grade.total"></s:textfield>
-			<p>
-				<s:submit value="确定"></s:submit>
-				<s:reset value="重置"></s:reset>
-		</s:form>
-
-		<s:fielderror></s:fielderror>
+		<form action="save_score" method="post">
+				学生号：<input type="text" style="text-indent:6px" name="stuNum"/>
+	      		课程号：<input type="text" style="text-indent:6px" name="courNum"/>
+	      		学期：<input type="text" style="text-indent:6px" name="semester"/>
+	      		分数：<input type="text" style="text-indent:6px" name="score"/>
+   				<input class="button" type="submit" value="添加"/>
+   				<input type="reset" value="重置"/>
+	      </form>
 	</center>
     </div>
 

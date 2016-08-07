@@ -63,32 +63,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
     <div id="content">
-    <center>
-  
-    <s:form action="AddCourse" method="post" theme="simple">
-      <p>
-        课程号：
-        <s:textfield name="course.cid"></s:textfield>
-      <p>
-        课程名：
-        <s:textfield name="course.cname"></s:textfield>
-      <p>
-        开课学期：
-        <s:textfield name="course.kkxq"></s:textfield>
-      <p>
-        课程学时：
-        <s:textfield name="course.xs"></s:textfield>
-      <p>
-        课程学分：
-        <s:textfield name="course.xf"></s:textfield>
-      <p>
-        <s:submit value="确定"></s:submit>
-        <s:reset value="重置"></s:reset>
-    </s:form>
-
-    <s:fielderror></s:fielderror>
-
-  </center>
+    <!-- 添加课程信息 -->
+     	  <center>
+	      <form action="save_course" method="post">
+	      		课程号：<input type="text" style="text-indent:6px" name="courNum"/>
+   				课程名：<input type="text"  style="text-indent:6px" name="courName"/>
+   				代课教师：<input type="text"  style="text-indent:6px" name="tea"/></br>
+   				限制人数：<input type="text"  style="text-indent:6px" name="courLimitedNum"/>
+   				课程开始日期	<input type="text" name="courStart" placeholder="yyyy-MM-dd"/><br>
+   				课程学分：<input type="text"  style="text-indent:6px" name="courCredits"/>
+   				课程类型：<input type="text"  style="text-indent:6px" name="courType"/>
+   				已选课人数：<input type="text"  style="text-indent:6px" name="choosedNum"/>
+   				选课学期：<input type="text"  style="text-indent:6px" name="courseSemester"/></br>
+   				<input class="button" type="submit" value="提交"/>
+   				<input type="reset" value="重置"/>
+	      </form>
+     	 </center>
     </div>
 
 

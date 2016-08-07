@@ -6,28 +6,28 @@
 	<constant name="struts.devMode" value="true"/>
 	<package name="default" extends="struts-default">
 		<action name="user" class="team.hnucs.edu.action.LoginAction" method="login">
-			<result name="student">/student.jsp</result>
-			<result name="teacher">/teacher.jsp</result>
-			<result name="administrator">/manager.jsp</result>
+			<result name="student">/homepage_student.jsp</result>
+			<result name="teacher">/homepage_teacher.jsp</result>
+			<result name="administrator">/homepage_manager.jsp</result>
 			<result name="loginError">/Error.jsp</result>
 		</action>
 		<action name="save_student" class="AdminManageStudentAction" method="save">
-			<result name="save">/manager.jsp</result>
+			<result name="save">/addStudentSuccess.jsp</result>
 		</action>
 		<action name="save_teacher" class="AdminManageTeacherAction" method="save">
-			<result name="save">/manager.jsp</result>
+			<result name="save">/addTeacherSuccess.jsp</result>
 		</action>
 		<action name="update_teacher" class="AdminManageTeacherAction" method="update">
-			<result name="update">/manager.jsp</result>
+			<result name="update">/modifyTeacherSuccess.jsp</result>
 		</action>
 		<action name="save_course" class="AdminManageCourseAction" method="save">
-			<result name="save">/manager.jsp</result>
+			<result name="save">/addCourseSuccess.jsp</result>
 		</action>
 		<action name="del_course" class="AdminManageCourseAction" method="delete">
-			<result name="delete">/manager.jsp</result>
+			<result name="delete">/deleteCourseSuccess.jsp</result>
 		</action>
 		<action name="del_student" class="AdminManageStudentAction" method="delete">
-			<result name="delete">/manager.jsp</result>
+			<result name="delete">/deleteStudentSuccess.jsp</result>
 		</action>
 		<action name="findall_student" class="AdminManageStudentAction" method="findAll">
 			<result name="findAll">/viewStudent.jsp</result>

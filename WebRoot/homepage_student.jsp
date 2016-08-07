@@ -4,13 +4,12 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-
 <!DOCTYPE html PUBLIC html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>home page</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="homestyle.css">
+  <link rel="stylesheet" type="text/css" href="css/homestyle.css">
   <link href="css/home.css" type="text/css" rel="stylesheet" />
 </head>
 </head>
@@ -24,9 +23,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <div id="slideshow" rel="auto-play">
         <div class="img"> 
           <span>
-          <a href="#" target="_blank"><img src="images/lan1.jpg" alt="1" /></a>
-          <a href="#" target="_blank"><img src="images/lan2.jpg" alt="2" /></a>
-          <a href="#" target="_blank"><img src="images/lan3.jpg" alt="3" /></a>
+          <a href="menu_student.jsp" target="_self"><img src="images/lan1.jpg" alt="1" /></a>
+          <a href="menu_student.jsp" target="_self"><img src="images/lan2.jpg" alt="2" /></a>
+          <a href="menu_student.jsp" target="_self"><img src="images/lan3.jpg" alt="3" /></a>
           </span>
           <div class="paging pattern"></div>
           <div class="paging subpattern"></div>
@@ -44,7 +43,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <div class="index-con" style="z-index: 0">
         <ul>
           <li class="in-kct in-course"> 
-            <a href="#" title="个人信息">
+            <a href="menu_student.jsp" title="个人信息" target="_self">
                 <div class="in-block"> 
                 <i class="bigger"></i> 
                 <span class="ch show" style="display: block;">个人信息</span> 
@@ -54,7 +53,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </a>
            </li>
           <li class="in-kct in-quest">
-          <a href="#" title="选课">
+          <a href="menu_student.jsp" title="选课" target="_self">
               <div class="in-block"> 
               <i class=""></i> 
               <span class="ch" style="display: inline;">选课</span>
@@ -64,7 +63,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
            </a> 
            </li>
           <li class="in-jbk in-plan"> 
-          <a href="#" title="成绩查询">
+          <a href="menu_student.jsp" title="成绩查询" target="_self">
             <div class="in-block"> 
               <i style="display: block;"></i> 
               <span style="display: inline;">成绩查询</span>
@@ -74,7 +73,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
            </a> 
            </li>
           <li class="in-jbk in-report"> 
-          <a href="#" title="选课结果">
+          <a href="menu_student.jsp" title="选课结果" target="_self">
             <div class="in-block"> 
             <i style="display: block;"></i> 
             <span style="display: inline;">选课结果</span>
@@ -85,7 +84,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
            </li>
 
           <li class="in-zxl in-forma"> 
-          <a href="#" title="修改信息">
+          <a href="menu_student.jsp" title="修改信息" target="_self">
             <div class="in-block"> 
             <i style="display: block;"></i> 
             <span style="display: inline;">修改信息</span> 
@@ -96,7 +95,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
            </li>
 
           <li class="in-zxl in-means"> 
-          <a href="#" title="修改密码">
+          <a href="menu_student.jsp" title="修改密码" target="_self">
             <div class="in-block"> <i></i> 
             <span>修改密码</span> 
             <i class="in-none"></i> 
@@ -105,7 +104,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
            </a> 
            </li>
 
-          <li class="in-jbk in-client"> <a href="#" target="_blank" title="查看作业">
+          <li class="in-jbk in-client"> <a href="menu_student.jsp" target="_self" title="查看作业">
             <div class="in-block"> <i></i> <span>查看作业</span> <i class="in-none"></i> <span class="in-text">
               
               </span> </div>

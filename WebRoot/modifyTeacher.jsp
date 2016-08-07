@@ -62,23 +62,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
     <div id="content">
-     <center>
-    <s:form action="ModifyTeacher" method="post" theme="simple">
-      <p>
-        <s:hidden name="teacher.id"></s:hidden>
-      <p>
-        教师职工号：
-        <s:textfield name="teacher.tid"></s:textfield>
-      <p>
-        教师姓名：
-        <s:textfield name="teacher.tname"></s:textfield>
-      <p>
-        <s:submit value="确定"></s:submit>
-        <s:reset value="重置"></s:reset>
-    </s:form>
-    <s:fielderror></s:fielderror>
-    <a href="ViewTeachers.action">显示教师信息</a>
-  </center>
+      <!-- 修改老师信息 -->
+     	 <center>
+	      <form action="update_teacher" method="post">
+	      		工号：<input type="text" style="text-indent:6px" name="teaNum"/>
+   				姓名：<input type="text"  style="text-indent:6px" name="teaName"/>
+   				性别	<input type="text"  style="text-indent:6px" name="teaSex"/></br>
+   				年龄：<input type="text"  style="text-indent:6px" name="teaAge"/>
+   				生日	<input type="text" name="teaBir" placeholder="yyyy-MM-dd"/><br>
+   				民族：<input type="text"  style="text-indent:6px" name="teaMinority"/>
+   				学位：<input type="text"  style="text-indent:6px" name="teaDegree"/>
+   				职称：<input type="text"  style="text-indent:6px" name="teaProTitle"/>
+   				联系方式：<input type="text"  style="text-indent:6px" name="teaContactWay"/></br>
+   				密码：<input type="text"  style="text-indent:6px" name="teaPassword"/></br>
+   				<label><input type="radio" name="userType" value="管理员" checked="checked" >管理员</label>
+   				<label><input type="radio" name="userType" value="教师" >教师</label>
+   				<input class="button" type="submit" value="提交"/>
+   				<input type="reset" value="重置"/>
+	      </form>
+     	 </center>
     </div>
 
 

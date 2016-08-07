@@ -14,8 +14,8 @@
             <key-many-to-one name="course" class="Course">
                 <column name="COUR_NUM" length="20" />
             </key-many-to-one>
-            <key-property name="semester" type="java.lang.Boolean">
-                <column name="SEMESTER" precision="1" scale="0" />
+            <key-property name="semester" type="java.lang.Byte">
+                <column name="SEMESTER" precision="2" scale="0" />
             </key-property>
             <key-property name="score" type="java.lang.Byte">
                 <column name="SCORE" precision="2" scale="0" />
