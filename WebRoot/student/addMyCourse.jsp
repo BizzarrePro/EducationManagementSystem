@@ -82,7 +82,7 @@ $(document).ready(function(){
           <li><a href="modifyTeacher.jsp">添加教师信息</a></li>
         </ul>
       </li>
-      <li class="drop-menu-effect"> <a target="_self" href="#"><span>添加课程</span></a>
+      <li class="drop-menu-effect"> <a target="_self" href="addMyCourse.jsp"><span>添加课程</span></a>
         <ul class="submenu">
          <li><a href="viewCourses.jsp">查看课程信息</a></li>
           <li><a href="modifyCourses.jsp">添加课程信息</a></li>
@@ -124,24 +124,20 @@ $(document).ready(function(){
     <div class="middle">
 
        <center>
-        <form action="save_teacher" method="post">
-          工号：<input type="text" style="text-indent:6px" name="teaNum"/>
-          姓名：<input type="text"  style="text-indent:6px" name="teaName"/>
-          性别  <input type="text"  style="text-indent:6px" name="teaSex"/></br>
-          年龄：<input type="text"  style="text-indent:6px" name="teaAge"/>
-          生日  <input type="text" name="teaBir" placeholder="yyyy-MM-dd"/><br>
-          民族：<input type="text"  style="text-indent:6px" name="teaMinority"/>
-          学位：<input type="text"  style="text-indent:6px" name="teaDegree"/>
-          职称：<input type="text"  style="text-indent:6px" name="teaProTitle"/>
-          联系方式：<input type="text"  style="text-indent:6px" name="teaContactWay"/></br>
-          密码：<input type="text"  style="text-indent:6px" name="teaPassword"/></br>
-          <label><input type="radio" name="userType" value="管理员" checked="checked" >管理员</label>
-          <label><input type="radio" name="userType" value="教师" >教师</label>
+        <form action="save_course" method="post">
+          课程号：<input type="text" style="text-indent:6px" name="courNum"/>
+          课程名：<input type="text"  style="text-indent:6px" name="courName"/>
+          代课教师：<input type="text"  style="text-indent:6px" name="tea"/></br>
+          限制人数：<input type="text"  style="text-indent:6px" name="courLimitedNum"/>
+          课程开始日期  <input type="text" name="courStart" placeholder="yyyy-MM-dd"/><br>
+          课程学分：<input type="text"  style="text-indent:6px" name="courCredits"/>
+          课程类型：<input type="text"  style="text-indent:6px" name="courType"/>
+          已选课人数：<input type="text"  style="text-indent:6px" name="choosedNum"/>
+          选课学期：<input type="text"  style="text-indent:6px" name="courseSemester"/></br>
           <input class="button" type="submit" value="提交"/>
           <input type="reset" value="重置"/>
         </form>
        </center>
-        <s:fielderror></s:fielderror>
 
    
       </div>
