@@ -140,7 +140,7 @@ $(document).ready(function(){
       <table align="center" border="1" cellpadding="0" cellspacing="0" class="tablecss" >
       <tr>
         <th style="text-align: center">学生号</th>
-        <th style="text-align: center">学生名/th>
+        <th style="text-align: center">学生名</th>
         <th style="text-align: center">课程名</th>
         <th style="text-align: center">学期</th>
         <th style="text-align: center">分数</th>
@@ -155,9 +155,9 @@ $(document).ready(function(){
           <td><s:property value="Semester" /></td>
           <td><s:property value="score" /></td>
           <td><a
-            href="Modifygrade.action?grade.id=<s:property value="id"/>修改</a></td>
+						href="ModifyGrade.action?Grade.id=<s:property value="id"/>">修改</a></td>
           <td><a
-            href="Deletegrade.action?grade.id=<s:property value="id"/>删除</a></td>
+						href="DeleteTeacher.action?teacher.id=<s:property value="id"/>">删除</a></td>
         </tr>
       </s:iterator>
        </table>

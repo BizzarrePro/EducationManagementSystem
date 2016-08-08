@@ -90,9 +90,9 @@ $(document).ready(function(){
       </li>
       <li class="drop-menu-effect"> <a target="_self" href="#"><span>查看成绩</span></a>
         <ul class="submenu">
-          <li><a href="viewGrade.jsp">查看学生成绩</a></li>
-          <li><a href="viewGrade.jsp">上传成绩</a></li>
-          <li><a href="modifyGrade.jsp">修改成绩</a></li>
+          <li><a href="viewCourse.jsp">查看学生成绩</a></li>
+          <li><a href="viewCourse.jsp">上传成绩</a></li>
+          <li><a href="modifyCourse.jsp">修改成绩</a></li>
         </ul>
       </li>
       <li class="drop-menu-effect"> <a target="_self" href="#"><span>考试安排</span></a>
@@ -140,7 +140,7 @@ $(document).ready(function(){
       <table align="center" border="1" cellpadding="0" cellspacing="0" class="tablecss" >
       <tr>
         <th style="text-align: center">课程编号</th>
-        <th style="text-align: center">教师/th>
+        <th style="text-align: center">教师</th>
         <th style="text-align: center">课程名</th>
         <th style="text-align: center">课程类型</th>
         <th style="text-align: center">学分</th>
@@ -150,14 +150,14 @@ $(document).ready(function(){
       <s:iterator value="coursess">
         <tr>
           <td><s:property value="courNum" /></td>
-          <td><s:property value="teacher" /></td>
+          <td><s:property value="Course" /></td>
           <td><s:property value="courName" /></td>
           <td><s:property value="courType" /></td>
           <td><s:property value="courCredits" /></td>
+           <td><a
+						href="ModifyCourse.action?Course.id=<s:property value="id"/>">修改</a></td>
           <td><a
-            href="Modifycourses.action?courses.id=<s:property value="id"/>修改</a></td>
-          <td><a
-            href="Deletecourses.action?courses.id=<s:property value="id"/>删除</a></td>
+						href="DeleteCourse.action?Course.id=<s:property value="id"/>">删除</a></td>
         </tr>
       </s:iterator>
        </table>
