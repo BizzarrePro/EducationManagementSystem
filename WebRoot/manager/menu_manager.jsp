@@ -56,7 +56,7 @@ $(document).ready(function(){
   <div class="nav">
     <ul class="clearfix">
       <li><a class="drop-menu-effect" target="-self" href="homepage_student.jsp"><span>首页</span></a></li>
-      <li class="drop-menu-effect"> <a target="-self" href="#"><span>添加学生信息</span></a>
+      <li class="drop-menu-effect"> <a target="-self" href="#"><span>添加信息</span></a>
         <ul class="submenu">
           <li><a href="viewStudent.jsp">查看学生信息</a></li>
           <li><a href="modifyStudent.jsp">添加学生信息</a></li>
@@ -64,7 +64,7 @@ $(document).ready(function(){
           <li><a href="modifyTeacher.jsp">添加教师信息</a></li>
         </ul>
       </li>
-      <li class="drop-menu-effect"> <a target="-self" href="#"><span>添加课程</span></a>
+      <li class="drop-menu-effect"> <a target="_self" href="#"><span>添加课程</span></a>
         <ul class="submenu">
          <li><a href="viewCourses.jsp">查看课程信息</a></li>
           <li><a href="modifyCourses.jsp">添加课程信息</a></li>
