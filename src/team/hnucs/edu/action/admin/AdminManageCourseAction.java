@@ -22,6 +22,10 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
 public class AdminManageCourseAction extends ActionSupport implements RequestAware, ModelDriven<Course>{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Course course = new Course();
 	private CourseService courseService;
 	private TeacherService teacherService;

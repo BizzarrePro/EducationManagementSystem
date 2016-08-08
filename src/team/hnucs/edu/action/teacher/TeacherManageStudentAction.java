@@ -25,51 +25,15 @@ public class TeacherManageStudentAction extends ActionSupport implements Request
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private ScoreService scoreService;
-	private StudentService studentService;
-	private CourseService courseService;
 	private TeacherService teacherService;
 	private Map<String, Object> req;
-	public void setScoreService(ScoreService scoreService) {
-		this.scoreService = scoreService;
-	}
-	public void setStudentService(StudentService studentService) {
-		this.studentService = studentService;
-	}
 	public void setTeacherService(TeacherService teacherService) {
 		this.teacherService = teacherService;
-	}
-	public void setCourseService(CourseService courseService) {
-		this.courseService = courseService;
 	}
 	@Override
 	public void setRequest(Map<String, Object> arg0) {
 		// TODO Auto-generated method stub
 		this.req = arg0;
-	}
-
-	public String saveScore(){
-		HttpServletRequest request = ServletActionContext.getRequest();
-		ActionContext context = ActionContext.getContext();
-		String teaNum = (String)context.getSession().get("username");
-		String stuNum = request.getParameter("stuNum");
-		String courName = request.getParameter("courName");
-		Byte semester = Byte.parseByte(request.getParameter("semester"));
-		Byte score = Byte.parseByte(request.getParameter("score"));
-		if(teaNum != null){
-			Student stu = studentService.queryById(stuNum);
-			Course cour = courseService.findByTeaAndCour(teaNum, courName);
-			scoreService.add(new Score(new ScoreId(stu, cour, semester, score), stu, cour));
-			return "save";
-		}
-		return "error";
-	}
-	public String deleteScore(){
-		HttpServletRequest request = ServletActionContext.getRequest();
-		String stuNum = request.getParameter("stuNum");
-		String courName = request.getParameter("courName");
-		scoreService.delete(courName, stuNum);
-		return "delete";
 	}
 	public String queryStudentOfCourse(){
 		ActionContext context = ActionContext.getContext();

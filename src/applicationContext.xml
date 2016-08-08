@@ -101,6 +101,11 @@
 		</property>
 	</bean>
 	<bean id="TeacherManageStudentAction" class="team.hnucs.edu.action.teacher.TeacherManageStudentAction">
+		<property name="teacherService">
+			<ref bean="teacherService" />
+		</property>
+	</bean>
+	<bean id="TeacherManageScoreAction" class="team.hnucs.edu.action.teacher.TeacherManageScoreAction">
 		<property name="courseService">
 			<ref bean="courseService" />
 		</property>
@@ -109,9 +114,6 @@
 		</property>
 		<property name="studentService">
 			<ref bean="studentService" />
-		</property>
-		<property name="teacherService">
-			<ref bean="teacherService" />
 		</property>
 	</bean>
 	<bean id="TeacherManageInformationAction" class="team.hnucs.edu.action.teacher.TeacherManageInformationAction">
